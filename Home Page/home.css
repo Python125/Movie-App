@@ -77,7 +77,7 @@ body {
 
 .container {
     padding: 15px;
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(158, 158, 158);
     text-align: center;
     color: black;
     font-size: 1.0em;
@@ -92,10 +92,10 @@ body {
   
 .btn {
     --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
+    border: 0.5px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 47%);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px;
     color: white;
     outline: none;
 }
@@ -160,7 +160,7 @@ body {
 }
 
 .btn-group button {
-    background-color: #0468aa;
+    background-color: #14a1ff;
     border: 1px solid blue;
     color: white;
     padding: 10px 24px;
