@@ -13,13 +13,10 @@ body {
   }
 
 #container {
-    background-color: #999999;
-    height: 300px;
+    height: 380px;
     width: 450px;
-    margin: auto;
     text-align: center;
-    opacity: 0.85;
-
+    background-color: rgb(173, 173, 173);
 }
 
 h1 {
@@ -38,7 +35,7 @@ h2 {
 
 p {
     font-size: 23px;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 #btn {
@@ -76,16 +73,15 @@ body {
     padding: 5px;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
 }
-  
+
 .container {
-    width: 800px;
+    width: 450px;
     max-width: 80%;
-    background-color: rgb(180, 180, 180);
-    padding: 20px;
-    opacity: 0.85;
+    padding: 10px;
+    background-color: rgb(173, 173, 173);
+    justify-content: center;
+    text-align: center;
 }
   
 .btn-grid {
