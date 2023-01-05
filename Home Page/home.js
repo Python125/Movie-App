@@ -1,7 +1,7 @@
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
 let quotes = [
-    'I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove. - Rufus T. Firefly (The Cocoanuts, 1929)',
+    'I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove. - Rufus T. Firefly (Duck Soup, 1933)',
     'Of all the gin joints, in all the towns, in all the world, she walks into mine. - Rick (Casablanca, 1942)',
     'Here`s looking at you, kid. - Rick (Casablanca, 1942)',
     'Fasten your seat belts, it`s going to be a bumpy night! - Margo (All About Eve, 1950)',
@@ -185,7 +185,7 @@ const questions = [
     ]
   },
   {
-    question: 'Which movie did NOT star Humphrey Bogart?',
+    question: 'Which movie does NOT star Humphrey Bogart?',
     answers:[
       { text: 'Casablanca', correct: false },
       { text: 'Each Dawn I Die', correct: true },
