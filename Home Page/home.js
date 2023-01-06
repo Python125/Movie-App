@@ -8,6 +8,7 @@ let quotes = [
     'Frankly, my dear, I don`t give a damn. - Rhett Butler (Gone with the Wind, 1939)',
     'Public enemy, he calls me! - Johnny Rocco (Key Largo, 1948)',
     'Mother of Mercy! Is this the end of Rico? - Caesar Enrico Bandello (Little Caesar, 1931)',
+    ''
 ];
 
 btn.addEventListener('click', function(){
@@ -192,5 +193,14 @@ const questions = [
       { text: 'The Oklahoma Kid', correct: false },
       { text: 'Kid Galahad', correct: false }
     ]
-  }
+  },
+  {
+    question: 'What year was Marilyn Monroe born?',
+    answers:[
+      { text: '1906', correct: false },
+      { text: '1899', correct: false },
+      { text: '1915', correct: false },
+      { text: '1926', correct: true }
+    ]
+  },
 ]
