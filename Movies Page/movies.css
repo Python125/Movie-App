@@ -45,9 +45,13 @@ html,body{
 }
 
 .container{
+	max-width: 1800px;
 	width: 1800px;
+	margin:0px auto;
 	height: 500px;
 	overflow-x: hidden;
+	position: relative;
+	border:2px solid #ddd;
 }
 
 .container .images{
