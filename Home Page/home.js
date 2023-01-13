@@ -1,14 +1,14 @@
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
 let quotes = [
-    'I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove. - Rufus T. Firefly (Duck Soup, 1933)',
-    'Of all the gin joints, in all the towns, in all the world, she walks into mine. - Rick (Casablanca, 1942)',
-    'Here`s looking at you, kid. - Rick (Casablanca, 1942)',
-    'Fasten your seat belts, it`s going to be a bumpy night! - Margo (All About Eve, 1950)',
-    'Frankly, my dear, I don`t give a damn. - Rhett Butler (Gone with the Wind, 1939)',
-    'Public enemy, he calls me! - Johnny Rocco (Key Largo, 1948)',
-    'Mother of Mercy! Is this the end of Rico? - Caesar Enrico Bandello (Little Caesar, 1931)',
-    ''
+    'I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove. - Rufus T. Firefly (Groucho Marx) (Duck Soup, 1933)',
+    'Of all the gin joints, in all the towns, in all the world, she walks into mine. - Rick (Humphrey Bogart) (Casablanca, 1942)',
+    'Here`s looking at you, kid. - Rick (Humphrey Bogart) (Casablanca, 1942)',
+    'Fasten your seat belts, it`s going to be a bumpy night! - Margo (Bette Davis) (All About Eve, 1950)',
+    'Frankly, my dear, I don`t give a damn. - Rhett Butler (Clark Gable) (Gone with the Wind, 1939)',
+    'Public enemy, he calls me! - Johnny Rocco (Edward G. Robinson) (Key Largo, 1948)',
+    'Mother of Mercy! Is this the end of Rico? - Caesar Enrico Bandello (Edward G. Robinson) (Little Caesar, 1931)',
+    'To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago. - Rocky Sullivan (James Cagney) (Angels with Dirty Faces, 1938)'
 ];
 
 btn.addEventListener('click', function(){
