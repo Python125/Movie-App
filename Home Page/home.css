@@ -128,7 +128,30 @@ body {
     display: none;
 }
 
-.footer {
+.btn-group button {
+    background-color: #14a1ff;
+    border: 1px solid blue;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none;
+  }
+  
+  .btn-group button:hover {
+    background-color: #1838a3;
+  }
+
+  .footer {
     padding: 40px 0;
     background-color: rgb(156, 156, 156);
 }
@@ -157,26 +180,3 @@ body {
     opacity: 1;
     color: rgb(255, 0, 0);
 }
-
-.btn-group button {
-    background-color: #14a1ff;
-    border: 1px solid blue;
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    float: left;
-  }
-  
-  .btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-right: none;
-  }
-  
-  .btn-group button:hover {
-    background-color: #1838a3;
-  }
