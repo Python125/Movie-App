@@ -1,70 +1,59 @@
 body {
-    background-image: url("https://wallpapercave.com/wp/wp2670465.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+	background-color: rgb(102, 102, 102);
 }
 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 100%;
   }
 
 #container {
-    opacity: 0.89;
     text-align: center;
-    background-color: rgb(146, 146, 146);
 }
 
 h1 {
     text-align: center;
-    color: white;
     font-family: 'Limelight';
-    font-size: 5.5em;
+    font-size: 95px;
+    color: white;
 }
 
 h2 {
     text-align: center;
-    color: white;
     font-family: 'Limelight';
-    font-size: 2.3em;
+    font-size: 45px;
+    color: black;
 }
 
 p {
-    font-size: 23px;
-    color: white;
+    font-size: 19px;
+    color: black;
 }
 
 #btn {
+    border-color: white;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    outline: none;
     margin: 35px auto;
-    height: 30px;
+    height: 50px;
     width: 250px;
     font-size: 22px;
-    background-color: rgb(207, 207, 207);
 }
 
 #output {
     margin: 25px auto;
-    font-size: 26px;
-    color: rgb(0, 0, 0);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-size: 30px;
+    color: black;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-  
-:root {
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
+    text-align: center;
+    font-size: 26px;
 }
 
 body {
@@ -75,41 +64,34 @@ body {
 
 .container {
     padding: 15px;
-    background-color: rgb(146, 146, 146);
     text-align: center;
-    color: rgb(0, 0, 0);
-    opacity: 0.89;
-    font-size: 1.3em;
 }
   
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(4, auto);
     gap: 10px;
-    margin: 20px 0;
+    margin: 15px;
 }
   
 .btn {
-    --hue: var(--hue-neutral);
-    border: 0.5px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 47%);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     outline: none;
 }
   
 .btn:hover {
-    border-color: black;
+    border-color: white;
 }
   
 .btn.correct {
-    --hue: var(--hue-correct);
+    background-color: rgb(71, 255, 71);
     color: black;
 }
   
 .btn.wrong {
-    --hue: var(--hue-wrong);
+    background-color: red;
 }
   
 .start-btn, .next-btn {
@@ -129,8 +111,6 @@ body {
 }
 
 .btn-group button {
-    background-color: #14a1ff;
-    border: 1px solid blue;
     color: white;
     padding: 10px 24px;
     cursor: pointer;
@@ -180,3 +160,263 @@ body {
     opacity: 1;
     color: rgb(255, 0, 0);
 }
+
+.button {
+    border: none;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+*{
+	margin: 1;
+	padding: 1;
+}
+
+body,html{
+	height: 100%;
+	align-items:center;
+	justify-content: center;
+}
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+.container{
+	max-width: 1800px;
+	width: 1800px;
+	margin:0px auto;
+	height: 500px;
+	overflow-x: hidden;
+	position: relative;
+	border:2px solid;
+}
+
+.container .images{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 90%;
+	top:0;
+	left:0;
+    transition: 250ms;
+}
+
+.container .images img{
+	max-width: 300px;
+	position: relative;
+	margin-right: 10px;
+}
+
+.container .buttons{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	align-items: center;
+	top:50%;
+	transform:translateY(-50%);
+	bottom: 0;
+}
+
+.container .buttons  i{
+	font-size:100px;
+	cursor:pointer;
+	color:black;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: rgb(156, 156, 156);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+    line-height: 1.6px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+    color: rgb(255, 0, 0);
+}
+
+.btn-group button {
+    background-color: #14a1ff;
+    border: 1px solid blue;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none;
+  }
+  
+  .btn-group button:hover {
+    background-color: #1838a3;
+  }
+
+.button {
+    background-color: #1c5bd1;
+    border: none;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+*{
+	margin: 1;
+	padding: 1;
+}
+
+body,html{
+	height: 100%;
+	align-items:center;
+	justify-content: center;
+}
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+.container{
+	max-width: 1800px;
+	width: 1800px;
+	margin:0px auto;
+	height: 500px;
+	overflow-x: hidden;
+	position: relative;
+	border:2px solid #ddd;
+}
+
+.container .images{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 90%;
+	top:0;
+	left:0;
+    transition: 250ms;
+}
+
+
+.container .images img{
+	max-width: 300px;
+	position: relative;
+	margin-right: 10px;
+}
+
+.container .buttons{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	align-items: center;
+	top:50%;
+	transform:translateY(-50%);
+	bottom: 0;
+}
+
+.container .buttons  i{
+	font-size:100px;
+	cursor:pointer;
+	color: black;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: rgb(156, 156, 156);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+    line-height: 1.6px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+    color: rgb(255, 0, 0);
+}
+
+.btn-group button {
+    background-color: #14a1ff;
+    border: 1px solid blue;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none;
+  }
+  
+  .btn-group button:hover {
+    background-color: #1838a3;
+  }
