@@ -204,13 +204,4 @@ const questions = [
       { text: '1926', correct: true }
     ]
   },
-  {
-    question: '?',
-    answers:[
-      { text: '', correct: false },
-      { text: '', correct: false },
-      { text: '', correct: false },
-      { text: '', correct: false }
-    ]
-  },
 ]
