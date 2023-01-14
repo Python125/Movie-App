@@ -35,9 +35,8 @@ p {
 #btn {
     border-color: white;
     border-radius: 10px;
-    color: rgb(0, 0, 0);
-    outline: none;
-    margin: 35px auto;
+    color: black;
+    margin: 25px auto;
     height: 50px;
     width: 250px;
     font-size: 22px;
@@ -179,18 +178,14 @@ body {
 
 body,html{
 	height: 100%;
-	align-items:center;
+	width: 100%;	
+    align-items:center;
 	justify-content: center;
 }
 
 *{
 	margin:0;
 	padding: 0;
-}
-
-html,body{
-	height: 100%;
-	width: 100%;
 }
 
 .container{
@@ -268,8 +263,6 @@ html,body{
 }
 
 .btn-group button {
-    background-color: #14a1ff;
-    border: 1px solid blue;
     color: white;
     padding: 10px 24px;
     cursor: pointer;
@@ -307,20 +300,9 @@ html,body{
 	padding: 1;
 }
 
-body,html{
-	height: 100%;
-	align-items:center;
-	justify-content: center;
-}
-
 *{
 	margin:0;
 	padding: 0;
-}
-
-html,body{
-	height: 100%;
-	width: 100%;
 }
 
 .container{
@@ -408,7 +390,6 @@ html,body{
   }
   
   .btn-group:after {
-    content: "";
     clear: both;
     display: table;
   }
