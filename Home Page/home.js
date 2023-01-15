@@ -1,15 +1,15 @@
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
 let quotes = [
-    '"<b>I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove.</b>" <br><br> Groucho Marx as - <i>Rufus T. Firefly</i> (<u>Duck Soup</u>, 1933)',
-    '"<b>Of all the gin joints, in all the towns, in all the world, she walks into mine.</b>" <br><br> Humphrey Bogart as - <i>Rick</i> (<u>Casablanca</u>, 1942)',
-    '"<b>Public enemy, he calls me!</b>" <br><br> Edward G. Robinson as - <i>Johnny Rocco</i> (<u>Key Largo</u>, 1948)',
-    '"<b>Fasten your seat belts, it`s going to be a bumpy night!</b>" <br><br> Bette Davis as - <i>Margo</i> (<u>All About Eve</u>, 1950)',
-    '"<b>Frankly, my dear, I don`t give a damn.</b>" <br><br> Clark Gable as - <i>Rhett Butler</i> (<u>Gone with the Wind</u>, 1939)',
-    '"<b>Here`s looking at you, kid.</b>" <br><br> Humphrey Bogart as - <i>Rick</i> (<u>Casablanca</u>, 1942)',
-    '"<b>To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago.</b>" <br><br> James Cagney as - <i>Rocky Sullivan</i> (<u>Angels with Dirty Faces</u>, 1938)',
-    '"<b>Mother of Mercy! Is this the end of Rico?</b>" <br><br> Edward G. Robinson as - <i>Caesar Enrico Bandello</i> (<u>Little Caesar</u>, 1931)',
-    '"<b>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</b>" <br><br> Monty Woolley as - <i>Sheridan Whiteside</i> (<u>The Man Who Came to Dinner</u>, 1942)',
+    '"<b>I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove.</b>" <br><br> Groucho Marx as - <u>Rufus T. Firefly</u> (<i>Duck Soup</i>, 1933)',
+    '"<b>Of all the gin joints, in all the towns, in all the world, she walks into mine.</b>" <br><br> Humphrey Bogart as - <u>Rick</u> (<i>Casablanca</i>, 1942)',
+    '"<b>Public enemy, he calls me!</b>" <br><br> Edward G. Robinson as - <u>Johnny Rocco</u> (<i>Key Largo</i>, 1948)',
+    '"<b>Fasten your seat belts, it`s going to be a bumpy night!</b>" <br><br> Bette Davis as - <u>Margo</u> (<i>All About Eve</i>, 1950)',
+    '"<b>Frankly, my dear, I don`t give a damn.</b>" <br><br> Clark Gable as - <u>Rhett Butler</u> (<i>Gone with the Wind</i>, 1939)',
+    '"<b>Here`s looking at you, kid.</b>" <br><br> Humphrey Bogart as - <u>Rick</u> (<i>Casablanca</i>, 1942)',
+    '"<b>To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago.</b>" <br><br> James Cagney as - <u>Rocky Sullivan</u> (<i>Angels with Dirty Faces</i>, 1938)',
+    '"<b>Mother of Mercy! Is this the end of Rico?</b>" <br><br> Edward G. Robinson as - <u>Caesar Enrico Bandello</u> (<i>Little Caesar</i>, 1931)',
+    '"<b>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</b>" <br><br> Monty Woolley as - <u>Sheridan Whiteside</u> (<i>The Man Who Came to Dinner</i>, 1942)',
   ];
 
 btn.addEventListener('click', function(){
