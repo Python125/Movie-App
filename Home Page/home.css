@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(102, 102, 102);
+	background-color: rgb(88, 88, 88);
 }
 
 .center {
@@ -38,7 +38,7 @@ p {
     color: black;
     margin: 25px auto;
     height: 50px;
-    width: 250px;
+    width: 310px;
     font-size: 22px;
 }
 
@@ -76,8 +76,7 @@ body {
 .btn {
     border-radius: 10px;
     padding: 5px;
-    color: rgb(0, 0, 0);
-    outline: none;
+    color: black;
 }
   
 .btn:hover {
@@ -86,7 +85,6 @@ body {
   
 .btn.correct {
     background-color: rgb(71, 255, 71);
-    color: black;
 }
   
 .btn.wrong {
