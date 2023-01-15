@@ -10,6 +10,7 @@ let quotes = [
     '"<b>To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago.</b>" <br><br> James Cagney as - <u>Rocky Sullivan</u> (<i>Angels with Dirty Faces</i>, 1938)',
     '"<b>Mother of Mercy! Is this the end of Rico?</b>" <br><br> Edward G. Robinson as - <u>Caesar Enrico Bandello</u> (<i>Little Caesar</i>, 1931)',
     '"<b>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</b>" <br><br> Monty Woolley as - <u>Sheridan Whiteside</u> (<i>The Man Who Came to Dinner</i>, 1942)',
+    '"<b>I never drink... wine.</b>" <br><br> Bela Lugosi as - <u>Count Dracula</u> (<i>Dracula</i>, 1931)',
   ];
 
 btn.addEventListener('click', function(){
