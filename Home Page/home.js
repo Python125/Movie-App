@@ -1,15 +1,15 @@
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
 let quotes = [
-    '"I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove." <br><br> Rufus T. Firefly (Duck Soup, 1933)',
-    '"Of all the gin joints, in all the towns, in all the world, she walks into mine." <br><br> Rick (Casablanca, 1942)',
-    '"Here`s looking at you, kid." <br><br> Rick (Casablanca, 1942)',
-    '"Fasten your seat belts, it`s going to be a bumpy night!" <br><br> Margo (All About Eve, 1950)',
-    '"Frankly, my dear, I don`t give a damn." <br><br> Rhett Butler (Gone with the Wind, 1939)',
-    '"Public enemy, he calls me!" <br><br> Johnny Rocco (Key Largo, 1948)',
-    '"Mother of Mercy! Is this the end of Rico?" <br><br> Caesar Enrico Bandello (Little Caesar, 1931)',
-    '"To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago." <br><br> Rocky Sullivan (Angels with Dirty Faces, 1938)',
-    '"My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*" <br><br> Sheridan Whiteside (The Man Who Came to Dinner, 1942)',
+    '"<b>I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove.</b>" <br><br> Rufus T. Firefly - played by Groucho Marx (Duck Soup, 1933)',
+    '"<b>Of all the gin joints, in all the towns, in all the world, she walks into mine.</b>" <br><br> Rick - played by Humphrey Bogart (Casablanca, 1942)',
+    '"<b>Public enemy, he calls me!</b>" <br><br> Johnny Rocco - played by Edward G. Robinson (Key Largo, 1948)',
+    '"<b>Fasten your seat belts, it`s going to be a bumpy night!</b>" <br><br> Margo - played by Bette Davis (All About Eve, 1950)',
+    '"<b>Frankly, my dear, I don`t give a damn.</b>" <br><br> Rhett Butler - played by Clark Gable (Gone with the Wind, 1939)',
+    '"<b>Here`s looking at you, kid.</b>" <br><br> Rick - played by Humphrey Bogart (Casablanca, 1942)',
+    '"<b>To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago.</b>" <br><br> Rocky Sullivan - played by James Cagney (Angels with Dirty Faces, 1938)',
+    '"<b>Mother of Mercy! Is this the end of Rico?</b>" <br><br> Caesar Enrico Bandello - played by Edward G. Robinson (Little Caesar, 1931)',
+    '"<b>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</b>" <br><br> Sheridan Whiteside - played by Monty Woolley (The Man Who Came to Dinner, 1942)',
   ];
 
 btn.addEventListener('click', function(){
