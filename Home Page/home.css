@@ -14,10 +14,17 @@ body {
 }
 
 h1 {
-    text-align: center;
-    font-family: 'Limelight';
-    font-size: 95px;
-    color: white;
+  text-align: center;
+  font-family: 'Limelight';
+  font-size: 95px;
+  color: black;
+}
+
+.highlight-word-color {
+  color: gold;
+  text-align: center;
+  font-family: 'Limelight';
+  font-size: 95px;
 }
 
 h2 {
@@ -28,7 +35,7 @@ h2 {
 }
 
 p {
-    font-size: 19px;
+    font-size: 25px;
     color: black;
 }
 
@@ -49,7 +56,6 @@ p {
 }
 
 *, *::before, *::after {
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 26px;
@@ -230,36 +236,6 @@ body,html{
 	color:black;
 }
 
-.footer {
-    padding: 40px 0;
-    background-color: rgb(156, 156, 156);
-}
-
-.footer ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 30px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.footer ul li {
-    display: inline-block;
-    padding: 0 15px;
-}
-
-.footer ul li a:hover{
-    opacity: 1;
-    color: rgb(255, 0, 0);
-}
-
 .btn-group button {
     color: white;
     padding: 10px 24px;
@@ -310,7 +286,7 @@ body,html{
 	height: 500px;
 	overflow-x: hidden;
 	position: relative;
-	border:2px solid #ddd;
+	border:0px solid;
 }
 
 .container .images{
@@ -347,6 +323,78 @@ body,html{
 	cursor:pointer;
 	color: black;
 }
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.media-scroller {
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-scroller--with-groups {
+  grid-auto-columns: 80%;
+}
+
+.media-group {
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+}
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/* general styling */
+
+.container {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+}
+
+.flow {
+  display: grid;
+  gap: var(--size-3);
+}
+
+.page-title {
+  font-size: var(--font-size-fluid-3);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-fluid-1);
+}
+
+.section-title {
+  padding-inline-start: var(--size-6);
+  margin-block: var(--size-9) var(--size-3);
+}
+
 
 .footer {
     padding: 40px 0;
