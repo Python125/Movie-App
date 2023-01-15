@@ -40,13 +40,13 @@ p {
 }
 
 #btn {
-    border-color: white;
+    border-color: rgb(218, 11, 11);
     border-radius: 10px;
     color: black;
     margin: 25px auto;
-    height: 50px;
-    width: 310px;
-    font-size: 22px;
+    height: 65px;
+    width: 245px;
+    font-size: 20px;
 }
 
 #output {
@@ -83,6 +83,10 @@ body {
     border-radius: 10px;
     padding: 5px;
     color: black;
+    text-align: center;
+    font-size: 20px;
+    height: 65px;
+    width: 245px;
 }
   
 .btn:hover {
@@ -323,78 +327,6 @@ body,html{
 	cursor:pointer;
 	color: black;
 }
-
-@import "https://unpkg.com/open-props";
-@import "https://unpkg.com/open-props/normalize.min.css";
-
-.media-scroller {
-  --_spacer: var(--size-3);
-  display: grid;
-  gap: var(--_spacer);
-  grid-auto-flow: column;
-  grid-auto-columns: 21%;
-
-  padding: 0 var(--_spacer) var(--_spacer);
-
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-}
-
-.media-scroller--with-groups {
-  grid-auto-columns: 80%;
-}
-
-.media-group {
-  display: grid;
-  gap: var(--_spacer);
-  grid-auto-flow: column;
-}
-
-.media-element {
-  display: grid;
-  grid-template-rows: min-content;
-}
-
-.media-element > img {
-  inline-size: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(--_spacer, 1rem);
-}
-
-.snaps-inline > * {
-  scroll-snap-align: start;
-}
-
-/* general styling */
-
-.container {
-  inline-size: min(100% - 4rem, 70rem);
-  margin-inline: auto;
-}
-
-.flow {
-  display: grid;
-  gap: var(--size-3);
-}
-
-.page-title {
-  font-size: var(--font-size-fluid-3);
-}
-
-.page-subtitle {
-  font-size: var(--font-size-fluid-1);
-}
-
-.section-title {
-  padding-inline-start: var(--size-6);
-  margin-block: var(--size-9) var(--size-3);
-}
-
 
 .footer {
     padding: 40px 0;
