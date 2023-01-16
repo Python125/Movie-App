@@ -209,12 +209,12 @@ const questions = [
     ]
   },
   {
-    question: 'What movie was a box-office flop in the year 1941?',
+    question: '?',
     answers:[
-      { text: 'TBD', correct: false },
-      { text: 'Citizen Kane', correct: true },
-      { text: '1915', correct: false },
-      { text: '1926', correct: false }
+      { text: '', correct: false },
+      { text: '', correct: true },
+      { text: '', correct: false },
+      { text: '', correct: false }
     ]
   },
 ]
