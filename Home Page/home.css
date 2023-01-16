@@ -8,25 +8,25 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 98%;
+    width: 99%;
   }
 
 #container {
-    text-align: center;
+   text-align: center;
 }
 
 h1 {
-  text-align: center;
-  font-family: 'Limelight';
-  font-size: 95px;
-  color: black;
-}
-
-.highlight-word-color {
-  color: #bf9a42;
-  text-align: center;
-  font-family: 'Limelight';
-  font-size: 95px;
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 95px;
+    color: black;
+  }
+  
+  .highlight-word-color {
+    color: #bf9a42;
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 95px;
 }
 
 h2 {
@@ -42,10 +42,11 @@ p {
 }
 
 #btn {
-    border-color: white;
     border-radius: 10px;
+    padding: 5px;
     color: black;
-    margin: 25px auto;
+    text-align: center;
+    justify-content: center;
     height: 65px;
     width: 245px;
     font-size: 20px;
@@ -61,20 +62,14 @@ p {
 *, *::before, *::after {
     font-family: Arial, sans-serif;
     text-align: center;
-    font-size: 26px;
-}
-
-body {
-    padding: 5px;
-    width: 98vw;
-    height: 98vh;
+    font-size: 23.5px;
 }
 
 .container {
     padding: 15px;
     text-align: center;
 }
-  
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -82,7 +77,7 @@ body {
     gap: 10px;
     margin: 10px;
 }
-  
+
 .btn {
     border-radius: 10px;
     padding: 5px;
@@ -94,11 +89,11 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
-  
+
 .btn:hover {
     border-color: white;
 }
-  
+
 .btn.correct {
     background-color: rgb(71, 255, 71);
 }
@@ -106,19 +101,19 @@ body {
 .btn.wrong {
     background-color: red;
 }
-  
+ 
 .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
 }
-  
+ 
 .controls {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-  
+ 
 .hide {
     display: none;
 }
@@ -128,61 +123,12 @@ body {
     padding: 10px 24px;
     cursor: pointer;
     float: left;
-  }
-  
-  .btn-group:after {
+}
+
+.btn-group:after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-right: none;
-  }
-  
-  .btn-group button:hover {
-    background-color: #1838a3;
-  }
-
-  .footer {
-    padding: 40px 0;
-    background-color: rgb(156, 156, 156);
-}
-
-.footer ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 30px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.footer ul li {
-    display: inline-block;
-    padding: 0 15px;
-}
-
-.footer ul li a:hover{
-    opacity: 1;
-    color: rgb(255, 0, 0);
-}
-
-.button {
-    border: none;
-    border-radius: 15px;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
 }
 
 *{
@@ -202,7 +148,7 @@ body {
 	height: 500px;
 	overflow-x: hidden;
 	position: relative;
-	border:2px solid;
+	border:2px solid #ddd;
 }
 
 .container .images{
@@ -239,39 +185,6 @@ body {
 	color:black;
 }
 
-.btn-group button {
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    float: left;
-  }
-  
-  .btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-right: none;
-  }
-  
-  .btn-group button:hover {
-    background-color: #1838a3;
-  }
-
-.button {
-    background-color: #1c5bd1;
-    border: none;
-    border-radius: 15px;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-}
-
 *{
 	margin: 1;
 	padding: 1;
@@ -289,7 +202,7 @@ body {
 	height: 500px;
 	overflow-x: hidden;
 	position: relative;
-	border:0px solid;
+	border: 0px;
 }
 
 .container .images{
@@ -326,55 +239,3 @@ body {
 	cursor:pointer;
 	color: black;
 }
-
-.footer {
-    padding: 40px 0;
-    background-color: rgb(156, 156, 156);
-}
-
-.footer ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 30px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.footer ul li {
-    display: inline-block;
-    padding: 0 15px;
-}
-
-.footer ul li a:hover{
-    opacity: 1;
-    color: rgb(255, 0, 0);
-}
-
-.btn-group button {
-    background-color: #14a1ff;
-    border: 1px solid blue;
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    float: left;
-  }
-  
-  .btn-group:after {
-    clear: both;
-    display: table;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-right: none;
-  }
-  
-  .btn-group button:hover {
-    background-color: #1838a3;
-  }
