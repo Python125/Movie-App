@@ -209,12 +209,12 @@ const questions = [
     ]
   },
   {
-    question: '?',
+    question: 'Who won best actor at the oscars in 1939?',
     answers:[
-      { text: '', correct: false },
-      { text: '', correct: true },
-      { text: '', correct: false },
-      { text: '', correct: false }
+      { text: 'Leslie Howard - Pygmalion', correct: false },
+      { text: 'Spencer Tracy - Boys Town', correct: true },
+      { text: 'James Cagney - Angels with Dirty Faces', correct: false },
+      { text: 'Robert Donat - The Citadel', correct: false }
     ]
   },
 ]
