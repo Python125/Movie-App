@@ -3,7 +3,6 @@ let output = document.getElementById('output');
 let quotes = [
     '"<b><i>I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove.</i></b>" <br><br> Rufus T. Firefly - played by <u>Groucho Marx</u> (<i>Duck Soup</i>, <b>1933</b>)',
     '"<b><i>Of all the gin joints, in all the towns, in all the world, she walks into mine.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> (<i>Casablanca</i>, <b>1942</u>)',
-
     '"<b><i>Public enemy, he calls me!</i></b>" <br><br> Johnny Rocco - played by <u>Edward G. Robinson</u> (<i>Key Largo</i>, <b>1948</b>)',
 
     
