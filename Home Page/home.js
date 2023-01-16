@@ -11,7 +11,8 @@ let quotes = [
     '"<b>Mother of Mercy! Is this the end of Rico?</b>" <br><br> <u>Caesar Enrico Bandello</u> - played by Edward G. Robinson (<i>Little Caesar</i>, 1931)',
     '"<b>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</b>" <br><br> <u>Sheridan Whiteside</u> - played by Monty Woolley (<i>The Man Who Came to Dinner</i>, 1942)',
     '"<b>I never drink... wine.</b>" <br><br> <u>Count Dracula</u> - played by Bela Lugosi (<i>Dracula</i>, 1931)',
-  ];
+    '"<b>Toto, I`ve a feeling we`re not in Kansas any more.</b>" <br><br> <u>Dorothy</u> - played by Judy Garland (<i>The Wizard of Oz</i>, 1939)',
+];
 
 btn.addEventListener('click', function(){
     let randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
