@@ -12,6 +12,7 @@ let quotes = [
     '"<b>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</b>" <br><br> <u>Sheridan Whiteside</u> - played by Monty Woolley (<i>The Man Who Came to Dinner</i>, 1942)',
     '"<b>I never drink... wine.</b>" <br><br> <u>Count Dracula</u> - played by Bela Lugosi (<i>Dracula</i>, 1931)',
     '"<b>Toto, I`ve a feeling we`re not in Kansas any more.</b>" <br><br> <u>Dorothy</u> - played by Judy Garland (<i>The Wizard of Oz</i>, 1939)',
+    '"<b>Rosebud.</b>" <br><br> <u>Charles Foster Kane</u> - played by Orson Welles (<i>Citizen Kane</i>, 1941)',
 ];
 
 btn.addEventListener('click', function(){
