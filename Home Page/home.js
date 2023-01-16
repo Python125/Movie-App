@@ -121,10 +121,10 @@ const questions = [
   {
     question: 'What year was Bette Davis born?',
     answers: [
-      { text: '1901', correct: false },
-      { text: '1915', correct: false },
-      { text: '1908', correct: true },
-      { text: '1893', correct: false }
+      { text: '1900', correct: false },
+      { text: '1920', correct: false },
+      { text: '1895', correct: false },
+      { text: '1908', correct: true }
     ]
   },
   {
@@ -166,9 +166,9 @@ const questions = [
   {
     question: 'What year was Humphrey Bogart born?',
     answers: [
-      { text: '1905', correct: false },
-      { text: '1900', correct: false },
       { text: '1899', correct: true },
+      { text: '1900', correct: false },
+      { text: '1890', correct: false },
       { text: '1880', correct: false }
     ]
   },
