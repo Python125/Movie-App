@@ -13,7 +13,7 @@ let quotes = [
     '"<b>I never drink... wine.</b>" <br><br> <u>Count Dracula</u> - played by Bela Lugosi (<i>Dracula</i>, 1931)',
     '"<b>Toto, I`ve a feeling we`re not in Kansas any more.</b>" <br><br> <u>Dorothy</u> - played by Judy Garland (<i>The Wizard of Oz</i>, 1939)',
     '"<b>Rosebud.</b>" <br><br> <u>Charles Foster Kane</u> - played by Orson Welles (<i>Citizen Kane</i>, 1941)',
-];
+  ];
 
 btn.addEventListener('click', function(){
     let randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
