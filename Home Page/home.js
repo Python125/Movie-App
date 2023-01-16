@@ -215,7 +215,6 @@ let images = image_div.querySelectorAll("img");
 const image_width = parseFloat(window.getComputedStyle(images[0]).getPropertyValue("width"));
 const image_margin_right = parseFloat(window.getComputedStyle(images[0]).getPropertyValue("margin-right"));
 
-
 function image_copy_add(){
 	for (let i = 0 ; i<= 20 ; i++){
 		images.forEach(function(item){
