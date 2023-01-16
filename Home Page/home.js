@@ -13,6 +13,7 @@ let quotes = [
     '"<b>I never drink... wine.</b>" <br><br> <u>Count Dracula</u> - played by Bela Lugosi (<i>Dracula</i>, 1931)',
     '"<b>Toto, I`ve a feeling we`re not in Kansas any more.</b>" <br><br> <u>Dorothy</u> - played by Judy Garland (<i>The Wizard of Oz</i>, 1939)',
     '"<b>Rosebud.</b>" <br><br> <u>Charles Foster Kane</u> - played by Orson Welles (<i>Citizen Kane</i>, 1941)',
+    '"<b>Made it, Ma! Top of the world!</b>" <br><br> <u>Cody Jarrett</u> - played by James Cagney (<i>White Heat</i>, 1949)',
   ];
 
 btn.addEventListener('click', function(){
