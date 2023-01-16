@@ -209,12 +209,12 @@ const questions = [
     ]
   },
   {
-    question: 'Who won best actor at the oscars in 1939?',
+    question: 'Who won best actor at the Academy Awards in 1939?',
     answers:[
-      { text: 'Leslie Howard - Pygmalion', correct: false },
-      { text: 'Spencer Tracy - Boys Town', correct: true },
-      { text: 'James Cagney - Angels with Dirty Faces', correct: false },
-      { text: 'Robert Donat - The Citadel', correct: false }
+      { text: 'Leslie Howard', correct: false },
+      { text: 'Spencer Tracy', correct: true },
+      { text: 'James Cagney', correct: false },
+      { text: 'Robert Donat', correct: false }
     ]
   },
 ]
