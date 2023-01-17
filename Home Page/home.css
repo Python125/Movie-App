@@ -45,11 +45,6 @@ h2 {
     color: black;
 }
 
-p {
-    font-size: 20px;
-    color: black;
-}
-
 #btn {
     border-radius: 10px;
     padding: 5px;
@@ -58,20 +53,19 @@ p {
     justify-content: center;
     height: 65px;
     width: 245px;
-    font-size: 20px;
+    font-size: 26px;
     cursor: pointer;
 }
 
 #output {
     margin: 10px auto;
-    font-size: 24px;
+    font-size: 23px;
     color: black;
 }
 
 *, *::before, *::after {
     font-family: Arial, sans-serif;
     text-align: center;
-    font-size: 23.5px;
 }
 
 .container {
@@ -95,7 +89,6 @@ p {
     justify-content: center;
     height: 65px;
     width: 245px;
-    font-size: 20px;
     cursor: pointer;
 }
 
@@ -112,7 +105,7 @@ p {
 }
  
 .start-btn, .next-btn {
-    font-size: 1.5rem;
+    font-size: 31px;
     font-weight: bold;
     padding: 10px 20px;
 }
