@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PythonMonty's Golden Age of Hollywood Website</title>
+    <title>Golden Age of Hollywood</title>
     <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="home.css">
     <script defer src="home.js"></script></body>
 </head>
 <body>
 
     <h2>Everything and anything you ever wanted to know about...</h2><br>
-    <h1>The <span class="highlight-word-color">Golden</span> Age
+    <h1>The <span class="highlight-word-color1">Golden</span> Age
     <br> of <br></h1>
     <img src="hollywood-sign.png" class="center">
     <div id="container">
         <br><h2>Movie Quote Generator</h2><br>
-        <button id="btn"><b>Click here for a random quote</b></button><br><br>
+        <button id="btn"><b>Quote</b></button><br><br>
         <div id="output"></div>
     </div>
 <br>
@@ -41,7 +42,7 @@
 
 <br>
 <br>
-    <h2>Movies from 1930 to 1939<br>Click on the movie poster or link below to see its page</h2><br>
+    <h2>1930 to 1939 <br>Click on the movie poster for a clip</h2><br>
     <div class="container">
     <div class="images">
         <span> 
@@ -56,12 +57,22 @@
              <p style="text-align: center;">All Quiet on the Western Front (1930)</p>
             </a>
         </span>
-        <span> 
-            <a href="https://www.imdb.com/title/tt0021884/?ref_=adv_li_tt" target="_blank">
-             <img src="https://m.media-amazon.com/images/M/MV5BMTQ0Njc1MjM0OF5BMl5BanBnXkFtZTgwNTY2NTUyMjE@._V1_.jpg" width="300" height="440"/>
-             <p style="text-align: center;">Frankenstein (1931)</p>
-            </a>
-        </span>
+        <span>
+            <img src="https://m.media-amazon.com/images/M/MV5BMTQ0Njc1MjM0OF5BMl5BanBnXkFtZTgwNTY2NTUyMjE@._V1_.jpg" width="300" height="440"/>
+            <br><button data-modal-target="#modal">Frankenstein (1931)</button>
+            <div class="modal" id="modal">
+              <div class="modal-header">
+                <div class="title" class="center">Frankenstein</div>
+                <button data-close-button class="close-button">&times;</button>
+              </div>
+              <div class="modal-body">
+                <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/AkSbwiKP3mo">
+                </iframe>    
+               </div>
+            </div>
+            <div id="overlay"></div>
+         </span>
         <span> 
             <a href="https://www.imdb.com/title/tt0021814/?ref_=adv_li_tt" target="_blank">
              <img src="https://m.media-amazon.com/images/M/MV5BMjhkMzEzN2ItM2EwYy00ZjE4LTg5MDItMzk5YWQ3YTk4ZGU0XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg" width="300" height="440"/>
@@ -275,7 +286,7 @@
 
 </div>
 
-<h2>Movies from 1940 to 1949<br>Click on the movie poster or link below to see its page</h2>
+<h2><span class="highlight-word-color2">1930</span> to <span class="highlight-word-color2">1939</span><br>Click on the <span class="highlight-word-color2">movie poster</span> for a clip</h2>
 <br><div class="container">
     <div class="images">
         <span>
@@ -556,7 +567,7 @@
     </div>
 
 </div>
-<h2>Click on their picture or name below to learn more about them.</h2><br>
+<h2><span class="highlight-word-color2">Golden Age</span> Icons</h2><br>
     <div class="container">
         <div class="images">
 			<span> 
