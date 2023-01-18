@@ -106,6 +106,7 @@ h2 {
 .start-btn, .next-btn {
     font-weight: bold;
     padding: 10px 20px;
+    font-size: 25px;
 }
  
 .controls {
@@ -184,7 +185,8 @@ h2 {
 }
 
 .modal {
-    width: 500px;
+    width: 650px;
+    height: 500px;
     position: fixed;
     top: 50%;
     left: 50%;
