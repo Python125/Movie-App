@@ -1,19 +1,9 @@
-body {
+body,html{
     align-items:center;
-    justify-content: center;
-    height: 100%;
+	justify-content: center;
     width: 100%;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-#container {
-   text-align: center;
+	height: 100%;
+    background-color: #ddd;
 }
 
 h1 {
@@ -21,7 +11,7 @@ h1 {
     font-family: 'Limelight';
     font-size: 95px;
     color: black;
-  }
+}
   
 .highlight-word-color1{
     color: #bf9a42;
@@ -30,18 +20,18 @@ h1 {
     font-size: 95px;
 }
 
-.highlight-word-color2{
-    color: #bf9a42;
-    text-align: center;
-    font-family: 'Limelight';
-    font-size: 45px;
-}
-
 h2 {
     text-align: center;
     font-family: 'Limelight';
     font-size: 45px;
     color: black;
+}
+
+.highlight-word-color2{
+    color: #bf9a42;
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 45px;
 }
 
 #btn {
@@ -52,31 +42,22 @@ h2 {
     justify-content: center;
     height: 65px;
     width: 245px;
+    font-size: 20px;
     cursor: pointer;
 }
 
-#output {
-    margin: 10px auto;
-    color: black;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
-*, *::before, *::after {
-    font-family: Arial, sans-serif;
+
+#container {
     text-align: center;
     font-size: 22.5px;
-}
-
-.container {
-    padding: 15px;
-    text-align: center;
-}
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    gap: 10px;
-    margin: 10px;
+    font-family: Arial, sans-serif;
 }
 
 .btn {
@@ -87,7 +68,31 @@ h2 {
     justify-content: center;
     height: 65px;
     width: 245px;
+    font-size: 20px;
     cursor: pointer;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+#output {
+    margin: 10px auto;
+    color: black;
+}
+
+.hide {
+   display: none;
+}
+
+.btn-group button {
+   padding: 10px 24px;
+   cursor: pointer;
+   float: left;
 }
 
 .btn:hover {
@@ -101,66 +106,12 @@ h2 {
 .btn.wrong {
     background-color: red;
 }
- 
+
 .start-btn, .next-btn {
     font-weight: bold;
     padding: 10px 20px;
     font-size: 25px;
 }
- 
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
- 
-.hide {
-    display: none;
-}
-
-.btn-group button {
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    float: left;
-}
-
-.btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-*{
-	margin:0;
-	padding: 0;
-}
-
-*{
-	margin:0;
-	padding: 0;
-}
-
-.container{
-	max-width: 1700px;
-	width: 1700px;
-	margin:0px auto;
-	height: 500px;
-	overflow-x: scroll;
-	position: relative;
-	border:0px solid;
-}
-
-.container .images{
-	position: absolute;
-	display: flex;
-	width: 100%;
-	height: 90%;
-	top:0;
-	left:0;
-    transition: 250ms;
-}
-
 
 .container .images img{
 	max-width: 300px;
@@ -180,10 +131,89 @@ h2 {
 	bottom: 0;
 }
 
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+  
+.btn-group button:hover {
+    background-color: #1838a3;
+}
+
+*{
+	margin: 1;
+	padding: 1;
+}
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+.container{
+	max-width: 1700px;
+	width: 1700px;
+	margin: 0px auto;
+	height: 500px;
+	overflow-x: scroll;
+	position: relative;
+	border:0px solid;
+    padding: 1px;
+    text-align: center;
+}
+
+.container .images{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 90%;
+	top:0;
+	left:0;
+    transition: 250ms;
+}
+
+.container .images img{
+	max-width: 300px;
+	position: relative;
+	margin-right: 10px;
+}
+
+.container .buttons{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	align-items: center;
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: 0;
+}
+
 .container .buttons  i{
-	font-size:100px;
+	font-size: 100px;
 	cursor:pointer;
 	color: black;
+}
+ 
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+  .btn-group button:not(:last-child) {
+    border-right: none;
 }
 
 .modal {
@@ -200,11 +230,11 @@ h2 {
     background-color: white;
     max-width: 80%;
 }
-  
+
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
 }
-  
+
 .modal-header {
     padding: 10px 15px;
     display: flex;
