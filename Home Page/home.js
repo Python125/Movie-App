@@ -15,6 +15,7 @@ let quotes = [
     '"<b><i>Rosebud.</i></b>" <br><br> Charles Foster Kane - played by <u>Orson Welles</u> (<i>Citizen Kane</i>, <b>1941</b>)',
     '"<b><i>Made it, Ma! Top of the world!</i></b>" <br><br> Cody Jarrett - played by <u>James Cagney</u> (<i>White Heat</i>, <b>1949</b>)',
     '"<b><i>When I invite a woman to dinner I expect her to look at my face.</i></b>" <br><br> Otis B. Driftwood - played by <u>Groucho Marx</u> (<i>A Night at the Opera</i>, <b>1935</b>)',
+    
   ];
 
 btn.addEventListener('click', function(){
