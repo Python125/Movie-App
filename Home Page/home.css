@@ -13,12 +13,6 @@ body,html{
     width: 100%;
 }
 
-#container {
-    text-align: center;
-    font-size: 22.5px;
-    font-family: Arial, sans-serif;
-}
-
 h1 {
     text-align: center;
     font-family: 'Limelight';
@@ -55,13 +49,20 @@ h2 {
     justify-content: center;
     height: 65px;
     width: 245px;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
+}
+
+#container {
+    text-align: center;
+    font-size: 22.5px;
+    font-family: Arial, sans-serif;
 }
 
 #output {
     margin: 10px auto;
     color: black;
+    font-size: 22.5px;
 }
 
 .btn-grid {
