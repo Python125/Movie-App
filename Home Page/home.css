@@ -41,6 +41,10 @@ h2 {
     font-size: 45px;
 }
 
+#container {
+    text-align: center;
+}
+
 #btn {
     border-radius: 10px;
     padding: 5px;
@@ -53,16 +57,12 @@ h2 {
     cursor: pointer;
 }
 
-#container {
-    text-align: center;
-    font-size: 22.5px;
-    font-family: Arial, sans-serif;
-}
-
 #output {
     margin: 10px auto;
     color: black;
     font-size: 22.5px;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 .btn-grid {
@@ -100,7 +100,6 @@ h2 {
 .start-btn, .next-btn {
     font-weight: bold;
     padding: 10px 20px;
-    font-size: 25px;
 }
 
 .controls {
@@ -118,12 +117,6 @@ h2 {
     padding: 10px 24px;
     cursor: pointer;
     float: left;
-}
-
-.btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 *{
