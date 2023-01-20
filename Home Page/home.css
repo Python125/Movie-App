@@ -116,58 +116,58 @@ h2 {
 }
 
 *{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 *{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .container{
-	max-width: 1700px;
-	width: 1700px;
-	margin: 0px auto;
-	height: 550px;
-	overflow-x: scroll;
-	position: relative;
-	border: 0px solid;
+    max-width: 1700px;
+    width: 1700px;
+    margin: 0px auto;
+    height: 550px;
+    overflow-x: scroll;
+    position: relative;
+    border: 0px solid;
     text-align: center;
 }
 
 .container .images{
-	position: absolute;
-	display: flex;
-	width: 100%;
-	height: 90%;
-	top: 0;
-	left: 0;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
     transition: 250ms;
 }
 
 .container .images img{
-	max-width: 300px;
-	position: relative;
-	margin-right: 10px;
+    max-width: 300px;
+    position: relative;
+    margin-right: 10px;
 }
 
 .container .buttons{
-	width: 100%;
-	height: 10%;
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	align-items: center;
-	top: 50%;
-	transform: translateY(-50%);
-	bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
 }
 
 .container .buttons  i{
-	font-size: 100px;
-	cursor: pointer;
-	color: black;
+    font-size: 100px;
+    cursor: pointer;
+    color: black;
 }
 
 .modal {
