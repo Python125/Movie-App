@@ -167,7 +167,7 @@ h2 {
 .container .buttons  i{
     font-size: 100px;
     cursor: pointer;
-    color: black;
+    color: red;
 }
 
 .modal {
