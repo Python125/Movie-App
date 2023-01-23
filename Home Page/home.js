@@ -232,7 +232,7 @@ const image_width = parseFloat(window.getComputedStyle(images[0]).getPropertyVal
 const image_margin_right = parseFloat(window.getComputedStyle(images[0]).getPropertyValue("margin-right"));
 
 function image_copy_add(){
-	for (let i = 0 ; i<= 20 ; i++){
+	for (let i = 0; i++;){
 		images.forEach(function(item){
             let img = document.createElement("img");
             let a_tag = document.createElement("a");
