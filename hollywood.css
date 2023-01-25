@@ -162,7 +162,7 @@ h2 {
 
 .container .images img{
     max-width: 300px;
-    position: relative;
+    position: none;
     margin-right: 10px;
 }
 
