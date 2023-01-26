@@ -233,7 +233,7 @@ carousels.forEach( carousel => {
   const next = carousel.querySelector('.next');
   const image_div = carousel.querySelector('.images');
   // ... and so on, working within the `carousel` namespace
-});
+})
 
 const previous = document.getElementsByClassName("previous")[0];
 const next = document.getElementsByClassName("next")[0];
@@ -244,34 +244,34 @@ const image_width = parseFloat(window.getComputedStyle(images[0]).getPropertyVal
 const image_margin_right = parseFloat(window.getComputedStyle(images[0]).getPropertyValue("margin-right"));
 
 function image_copy_add(){
-	for (let i = 0; i++;){
-		images.forEach(function(item){
+  for (let i = 0; i++;){
+    images.forEach(function(item){
             let img = document.createElement("img");
             let a_tag = document.createElement("a");
             a_tag.href = "#";
             img.src = item.src;
             a_tag.appendChild(img);
-			image_div.appendChild(a_tag);
-		});
-	}
+      image_div.appendChild(a_tag);
+    });
+  }
 }
 image_copy_add();
 function previous_function(){
-	if (left < 0) {
-		left = left + (image_width + image_margin_right);
-		image_div.style.left = left + "px";
-	}
+  if (left < 0) {
+    left = left + (image_width + image_margin_right);
+    image_div.style.left = left + "px";
+  }
 }
 function next_function(){
-	images = image_div.querySelectorAll("img");
-	left = (left-(image_width + image_margin_right));
-	image_div.style.left = parseFloat(left) + "px";
+  images = image_div.querySelectorAll("img");
+  left = (left-(image_width + image_margin_right));
+  image_div.style.left = parseFloat(left) + "px";
 }
 previous.addEventListener("click",() => {
-	previous_function();
+  previous_function();
 });
 next.addEventListener("click",() => {
-	next_function();
+  next_function();
 });
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
