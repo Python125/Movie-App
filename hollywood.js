@@ -224,17 +224,6 @@ const questions = [
   },
 ]
 
-const carousels = document.querySelectorAll(".carousel-container");
-// that now contains an array - and
-//   each one should contain its own
-//   DOM tree of buttons, images, etc
-carousels.forEach( carousel => {
-  const previous = carousel.querySelector('.previous');
-  const next = carousel.querySelector('.next');
-  const image_div = carousel.querySelector('.images');
-  // ... and so on, working within the `carousel` namespace
-})
-
 const previous = document.getElementsByClassName("previous")[0];
 const next = document.getElementsByClassName("next")[0];
 const image_div = document.querySelector(".images");
