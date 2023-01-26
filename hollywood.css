@@ -130,7 +130,7 @@ h2 {
     width: 1700px;
     margin: 0px auto;
     height: 550px;
-    overflow-x: hidden;
+    overflow-x: scroll;
     position: relative;
     border: 0px solid;
     text-align: center;
@@ -157,7 +157,7 @@ h2 {
     transform: translateY(-50%);
     font-size: 100px;
     cursor: pointer;
-    color: burlywood;
+    color: red;
 }
 
 .container .images img{
