@@ -251,6 +251,7 @@ function previous_function(){
     image_div.style.left = left + "px";
   }
 }
+
 function next_function(){
   images = image_div.querySelectorAll("img");
   left = (left-(image_width + image_margin_right));
