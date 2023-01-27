@@ -11,7 +11,6 @@ let quotes = [
     '"<b><i>To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago.</i></b>" <br><br> Rocky Sullivan - played by <u>James Cagney</u> (<i>Angels with Dirty Faces</i>, <b>1938</b>)',
     '"<b><i>Toto, I`ve a feeling we`re not in Kansas anymore.</i></b>" <br><br> Dorothy - played by <u>Judy Garland</u> (<i>The Wizard of Oz</i>, <b>1939</b>)',
     '"<b><i>Frankly, my dear, I don`t give a damn.</i></b>" <br><br> Rhett Butler - played by <u>Clark Gable</u> (<i>Gone with the Wind</i>, <b>1939</b>)',
-
     '"<b><i>Rosebud.</i></b>" <br><br> Charles Foster Kane - played by <u>Orson Welles</u> (<i>Citizen Kane</i>, <b>1941</b>)',
     '"<b><i>Of all the gin joints, in all the towns, in all the world, she walks into mine.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> (<i>Casablanca</i>, <b>1942</u>)',
     '"<b><i>Here`s looking at you, kid.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> (<i>Casablanca</i>, <b>1942</b>)',
