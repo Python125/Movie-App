@@ -134,6 +134,8 @@ h2 {
     position: relative;
     border: 0px solid;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .container .images{
@@ -144,6 +146,17 @@ h2 {
     top: 0;
     left: 0;
     transition: 250ms;
+}
+
+.images span {
+    width: 48%;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .images span {
+      width: 100%;
+    }
 }
 
 .container .buttons{
@@ -170,13 +183,13 @@ h2 {
 }
 
 .previous {
-    margin-left: 20px;
+    margin-left: 0px;
     font-size: 25px;
     justify-content: center;
 }
 
 .next {
-    margin-left: 20px;
+    margin-left: 0px;
     font-size: 25px;
     justify-content: center;
 }
