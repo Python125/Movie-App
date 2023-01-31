@@ -224,47 +224,39 @@ const questions = [
   },
 ]
 
-const previous = document.getElementsByClassName("previous")[0];
-const next = document.getElementsByClassName("next")[0];
-const image_div = document.querySelector(".images");
-let left = parseFloat(window.getComputedStyle(image_div).getPropertyValue("left"));
-let images = image_div.querySelectorAll("img");
-const image_width = parseFloat(window.getComputedStyle(images[0]).getPropertyValue("width"));
-const image_margin_right = parseFloat(window.getComputedStyle(images[0]).getPropertyValue("margin-right"));
+const sliderContainers = document.querySelectorAll(".container");
 
-function image_copy_add(){
-  for (let i = 0; i++;){
-    images.forEach(function(item){
-            let img = document.createElement("img");
-            let a_tag = document.createElement("a");
-            a_tag.href = "#";
-            img.src = item.src;
-            a_tag.appendChild(img);
-      image_div.appendChild(a_tag);
+sliderContainers.forEach((container)) => {
+  const images = container.querySelectorAll(".images img");
+  const prevButton = container.querySelector(".buttons .previous");
+  const nextButton = container.querySelector(".buttons .next");
+  let currentImageIndex = 0;
+
+  const showImage = (imageIndex) => {
+    images.forEach((img, index) => {
+      if (index === imageIndex) {
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
     });
-  }
-}
-image_copy_add();
-function previous_function(){
-  if (left < 0) {
-    left = left + (image_width + image_margin_right);
-    image_div.style.left = left + "px";
-  }
-}
+  };
 
-function next_function(){
-  images = image_div.querySelectorAll("img");
-  left = (left-(image_width + image_margin_right));
-  image_div.style.left = parseFloat(left) + "px";
-}
-previous.addEventListener("click",() => {
-  previous_function();
-});
-next.addEventListener("click",() => {
-  next_function();
-});
+  prevButton.addEventListener("click", () => {
+    currentImageIndex--;
+    if (currentImageIndex < 0) {
+      currentImageIndex = images.length - 1;
+    }
+    showImage(currentImageIndex);
+  });
 
-
+  nextButton.addEventListener("click", () => {
+    currentImageIndex++;
+    if (currentImageIndex === images.length) {
+      currentImageIndex = 0;
+    }
+    showImage(currentImageIndex);
+  });
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
