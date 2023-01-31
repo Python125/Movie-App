@@ -128,8 +128,8 @@ h2 {
 .container{
     max-width: 1700px;
     width: 1700px;
-    margin: 0px auto;
     height: 550px;
+    margin: 0px auto;
     overflow-x: scroll;
     position: relative;
     border: 0px solid;
