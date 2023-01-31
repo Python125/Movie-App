@@ -146,31 +146,45 @@ h2 {
     transition: 250ms;
 }
 
-.container .images img{
-    max-width: 300px;
-    position: none;
-    margin-right: 10px;
+.container .buttons{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .previous,
 .next {
-  width: 100px;
+  width: 8%;
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: lightblue;
-  border: 0px;
+  border: 1px solid black;
   border-radius: 5px;
-  cursor: pointer;
-  font-size: 25px;
+  outline: none;
   text-align: center;
-  color: black;
+  cursor: pointer;
 }
 
 .previous {
-    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    justify-content: center;
 }
 
 .next {
     margin-left: 20px;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.container .images img{
+    max-width: 300px;
+    position: none;
+    margin-right: 10px;
 }
 
 .modal {
