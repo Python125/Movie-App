@@ -225,8 +225,7 @@ const questions = [
 ]
 
 const sliderContainers = document.querySelectorAll(".container");
-
-sliderContainers.forEach((container)) => {
+sliderContainers.forEach((container) => {
   const images = container.querySelectorAll(".images img");
   const prevButton = container.querySelector(".buttons .previous");
   const nextButton = container.querySelector(".buttons .next");
@@ -257,6 +256,7 @@ sliderContainers.forEach((container)) => {
     }
     showImage(currentImageIndex);
   });
+});
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
