@@ -148,6 +148,12 @@ h2 {
     transition: 250ms;
 }
 
+.container .images img{
+    max-width: 300px;
+    position: none;
+    margin-right: 10px;
+}
+
 .images span {
     width: 48%;
     text-align: center;
@@ -192,12 +198,6 @@ h2 {
     margin-left: 0px;
     font-size: 25px;
     justify-content: center;
-}
-
-.container .images img{
-    max-width: 300px;
-    position: none;
-    margin-right: 10px;
 }
 
 .modal {
