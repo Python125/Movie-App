@@ -1,6 +1,5 @@
 body,html{
     height: 100%;
-    width: 100%;
     align-items:center;
     justify-content: center;
     background-color: rgb(139, 139, 139);
@@ -175,12 +174,12 @@ h2 {
 
 .previous,
 .next {
-  width: 8%;
+  width: 2%;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightblue;
+  background-color: rgb(172, 172, 172);
   border: 1px solid black;
   border-radius: 5px;
   outline: none;
@@ -190,14 +189,17 @@ h2 {
 
 .previous {
     margin-left: 0px;
-    font-size: 25px;
     justify-content: center;
 }
 
 .next {
     margin-left: 0px;
-    font-size: 25px;
     justify-content: center;
+}
+
+.container .buttons  i{
+	font-size: 30px;
+	color: black;
 }
 
 .modal {
