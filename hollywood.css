@@ -47,24 +47,26 @@ h2 {
 }
 
 #container {
+    border: 5px solid #F5E4C3;
+    height: 300px;
+    width: 750px;
+    margin: auto;
     text-align: center;
 }
 
 #btn {
-    border-radius: 10px;
-    padding: 5px;
-    color: black;
-    text-align: center;
-    justify-content: center;
-    height: 65px;
-    width: 245px;
-    font-size: 23px;
-    cursor: pointer;
+    margin: 50px auto;
+    height: 50px;
+    width: 250px;
+    font-size: 22px;
+    background-color: rgb(192, 191, 191);
+
 }
 
 #output {
-    margin: 10px auto;
-    color: black;
+    margin: 25px auto;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
 }
 
 .btn-grid {
