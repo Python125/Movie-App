@@ -124,20 +124,20 @@ h2 {
     padding: 0;
 }
 
-.container{
+.container {
     max-width: 1700px;
     width: 1700px;
     height: 550px;
     margin: 0px auto;
     overflow-x: scroll;
     position: relative;
-    border: 0px solid;
+    border: 1px solid black;
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.container .images{
+.container .images {
     position: absolute;
     display: flex;
     width: 100%;
@@ -147,7 +147,7 @@ h2 {
     transition: 250ms;
 }
 
-.container .images img{
+.container .images img {
     max-width: 300px;
     position: none;
     margin-right: 10px;
@@ -164,7 +164,7 @@ h2 {
     }
 }
 
-.container .buttons{
+.container .buttons {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -197,7 +197,7 @@ h2 {
     justify-content: center;
 }
 
-.container .buttons  i{
+.container .buttons  i {
 	font-size: 30px;
 	color: black;
 }
