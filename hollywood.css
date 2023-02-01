@@ -127,9 +127,9 @@ h2 {
 .container {
     max-width: 1700px;
     width: 1700px;
-    height: 550px;
+    height: 515px;
     margin: 0px auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     position: relative;
     border: 1px solid black;
     text-align: center;
@@ -149,7 +149,7 @@ h2 {
 
 .container .images img {
     max-width: 300px;
-    position: none;
+    position: relative;
     margin-right: 10px;
 }
 
@@ -170,6 +170,12 @@ h2 {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    bottom: 0;
+}
+
+.container .buttons  i {
+	font-size: 30px;
+	color: black;
 }
 
 .previous,
@@ -195,11 +201,6 @@ h2 {
 .next {
     margin-left: 0px;
     justify-content: center;
-}
-
-.container .buttons  i {
-	font-size: 30px;
-	color: black;
 }
 
 .modal {
