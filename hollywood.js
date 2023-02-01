@@ -15,7 +15,7 @@ let quotes = [
     '"<b><i>Rosebud.</i></b>" <br><br> Charles Foster Kane - played by <u>Orson Welles</u> (<i>Citizen Kane</i>, <b>1941</b>)',
     '"<b><i>Of all the gin joints, in all the towns, in all the world, she walks into mine.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> (<i>Casablanca</i>, <b>1942</u>)',
     '"<b><i>Here`s looking at you, kid.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> (<i>Casablanca</i>, <b>1942</b>)',
-    '"<b><i>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</i></b>" <br><br> Sheridan Whiteside - played by <u>Monty Woolley</u> (<i>The Man Who Came to Dinner</i>, <b>1942</b>)',
+    '"<b><i>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</i></b>" <br><br> Sheridan Whiteside - played by <u>Monty Woolley</u> <br><br> (<i>The Man Who Came to Dinner</i>, <b>1942</b>)',
     '"<b><i>Public enemy, he calls me!</i></b>" <br><br> Johnny Rocco - played by <u>Edward G. Robinson</u> (<i>Key Largo</i>, <b>1948</b>)',
     '"<b><i>Made it, Ma! Top of the world!</i></b>" <br><br> Cody Jarrett - played by <u>James Cagney</u> (<i>White Heat</i>, <b>1949</b>)',
     '"<b><i>Fasten your seat belts, it`s going to be a bumpy night!</i></b>" <br><br> Margo - played by <u>Bette Davis</u> (<i>All About Eve</i>, <b>1950</b>)',
