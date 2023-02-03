@@ -1,0 +1,299 @@
+body,html{
+    height: 100%;
+    align-items:center;
+    justify-content: center;
+    background-color: gray;
+}
+
+:root {
+    font-size: 22px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 95px;
+    color: black;
+}
+  
+.highlight-word-color1{
+    color: #d1a746;
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 95px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 40px;
+    color: black;
+}
+
+.highlight-word-color2{
+    color: #d1a746;
+    text-align: center;
+    font-family: 'Limelight';
+    font-size: 40px;
+}
+
+#container {
+    border: 1px solid black;
+    height: 500px;
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#btn {
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    height: 65px;
+    width: 150px;
+    font-size: 23px;
+    cursor: pointer;
+
+}
+
+#output {
+    margin: 25px auto;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+}
+
+.element1 {
+    height: 500px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.element2 {
+    height: 500px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    height: 65px;
+    width: 150px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: white;
+}
+
+.btn.correct {
+    background-color: rgb(71, 255, 71);
+}
+  
+.btn.wrong {
+    background-color: red;
+}
+
+.start-btn, .next-btn {
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 23px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1700px;
+    width: 1700px;
+    height: 530px;
+    background-color: rgb(139, 139, 139);
+    margin: auto;
+    overflow: none;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px 2px;
+}
+
+.container .images {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    transition: 250ms;
+}
+
+.container .images img {
+    max-width: 300px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.images span {
+    width: 48%;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .images span {
+      width: 100%;
+    }
+}
+
+.container .buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+}
+
+.container .buttons  i {
+	font-size: 30px;
+	color: black;
+}
+
+.previous,
+.next {
+  width: 2%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.previous {
+    margin-left: 0px;
+    justify-content: center;
+}
+
+.next {
+    margin-left: 0px;
+    justify-content: center;
+}
+
+.modal {
+    width: 650px;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 300ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    max-width: 80%;
+    overflow: scroll;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+  
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+  
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+  
+.modal-body {
+    padding: 10px 15px;
+}
+  
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+  
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    overflow-x: scroll;
+}
