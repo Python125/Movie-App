@@ -1,8 +1,8 @@
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
 let quotes = [
+
     '"<b><i>Mother of Mercy! Is this the end of Rico?</i></b>" <br><br> Caesar Enrico Bandello - played by <u>Edward G. Robinson</u> <br><br> (<i>Little Caesar</i>, <b>1931</b>)',
-    
     '"<b><i>I never drink... wine.</i></b>" <br><br> Count Dracula - played by <u>Bela Lugosi</u> <br><br> (<i>Dracula</i>, <b>1931</b>)',
     '"<b><i>Listen, Little Boy, in this business there`s only one law you gotta follow to keep out of trouble: Do it first, do it yourself, and keep on doing it.</i></b>" <br><br> Tony Camonte - played by <u>Paul Muni</u> <br><br> (<i>Scarface</i>, <b>1932</b>)',
     '"<b><i>I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove.</i></b>" <br><br> Rufus T. Firefly - played by <u>Groucho Marx</u> <br><br> (<i>Duck Soup</i>, <b>1933</b>)',
@@ -16,7 +16,6 @@ let quotes = [
     '"<b><i>Rosebud.</i></b>" <br><br> Charles Foster Kane - played by <u>Orson Welles</u> <br><br> (<i>Citizen Kane</i>, <b>1941</b>)',
     '"<b><i>Of all the gin joints, in all the towns, in all the world, she walks into mine.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> <br><br> (<i>Casablanca</i>, <b>1942</u>)',
     '"<b><i>Here`s looking at you, kid.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> <br><br> (<i>Casablanca</i>, <b>1942</b>)',
-    '"<b><i>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</i></b>" <br><br> Sheridan Whiteside - played by <u>Monty Woolley</u> <br><br> (<i>The Man Who Came to Dinner</i>, <b>1942</b>)',
     '"<b><i>Public enemy, he calls me!</i></b>" <br><br> Johnny Rocco - played by <u>Edward G. Robinson</u> <br><br> (<i>Key Largo</i>, <b>1948</b>)',
     '"<b><i>Made it, Ma! Top of the world!</i></b>" <br><br> Cody Jarrett - played by <u>James Cagney</u> <br><br> (<i>White Heat</i>, <b>1949</b>)',
 ];
