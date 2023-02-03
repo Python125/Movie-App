@@ -2,7 +2,7 @@ body,html{
     height: 100%;
     align-items:center;
     justify-content: center;
-    background-color: rgb(120, 120, 120);
+    background-color: gray;
 }
 
 :root {
@@ -292,5 +292,11 @@ h2 {
 }
 
 footer {
-    background-color: aquamarine;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 30%;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
 }
