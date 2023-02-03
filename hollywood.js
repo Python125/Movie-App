@@ -151,39 +151,12 @@ const questions = [
     ]
   },
   {
-    question: 'Which movie starred Anthony Perkins in 1960?',
-    answers: [
-      { text: 'The Alamo', correct: false },
-      { text: 'Spartacus', correct: false },
-      { text: 'The Apartment', correct: false },
-      { text: 'Psycho', correct: true }
-    ]
-  },
-  {
-    question: 'Which movie was directed by Stanley Kubrick in 1956?',
-    answers: [
-      { text: 'The Killing', correct: true },
-      { text: 'Lolita', correct: false },
-      { text: 'Spartacus', correct: false },
-      { text: 'Paths of Glory', correct: false }
-    ]
-  },
-  {
     question: 'What year was Humphrey Bogart born?',
     answers: [
       { text: '1899', correct: true },
       { text: '1900', correct: false },
       { text: '1890', correct: false },
       { text: '1880', correct: false }
-    ]
-  },
-  {
-    question: 'What is Marilyn Monroe`s most famous movie?',
-    answers: [
-      { text: 'Bus Stop', correct: false },
-      { text: 'Some Like It Hot', correct: true },
-      { text: 'The Prince and the Showgirl', correct: false },
-      { text: 'The Seven Year Itch', correct: false }
     ]
   },
   {
@@ -202,15 +175,6 @@ const questions = [
       { text: 'Each Dawn I Die', correct: true },
       { text: 'The Oklahoma Kid', correct: false },
       { text: 'Kid Galahad', correct: false }
-    ]
-  },
-  {
-    question: 'What year was Marilyn Monroe born?',
-    answers:[
-      { text: '1906', correct: false },
-      { text: '1899', correct: false },
-      { text: '1915', correct: false },
-      { text: '1926', correct: true }
     ]
   },
   {
