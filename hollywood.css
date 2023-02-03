@@ -290,3 +290,7 @@ h2 {
     opacity: 1;
     pointer-events: all;
 }
+
+footer {
+    background-color: aquamarine;
+}
