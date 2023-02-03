@@ -65,7 +65,7 @@ h2 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px 2px;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 
 .container .images {
