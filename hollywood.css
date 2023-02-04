@@ -136,7 +136,7 @@ h2 {
 }
 
 .modal {
-    width: 650px;
+    width: 700px;
     height: 500px;
     position: fixed;
     top: 50%;
@@ -298,4 +298,5 @@ footer {
     color: black;
     text-align: center;
     display: flex;
+    justify-content: space-around;
 }
