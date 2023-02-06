@@ -195,6 +195,24 @@ const questions = [
       { text: 'Duck Soup (1933)', correct: true }
     ]
   },
+  {
+    question: '?',
+    answers:[
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: true }
+    ]
+  },
+  {
+    question: '?',
+    answers:[
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: true }
+    ]
+  },
 ]
 
 const sliderContainers = document.querySelectorAll(".container");
