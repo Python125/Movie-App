@@ -186,6 +186,15 @@ const questions = [
       { text: 'Robert Donat', correct: false }
     ]
   },
+  {
+    question: 'What was the most successful movie starring the Marx Brothers?',
+    answers:[
+      { text: 'Animals Crackers (1930)', correct: false },
+      { text: 'A Night at the Opera (1935)', correct: false },
+      { text: 'Horse Feathers (1932)', correct: false },
+      { text: 'Duck Soup (1933)', correct: true }
+    ]
+  },
 ]
 
 const sliderContainers = document.querySelectorAll(".container");
