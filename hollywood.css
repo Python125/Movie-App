@@ -293,10 +293,10 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 180px;
     background-color: silver;
     color: black;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
