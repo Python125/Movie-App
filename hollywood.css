@@ -304,20 +304,27 @@ input[type=text]:invalid {
     border: red solid 1px;
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
 }
+
 .container > label {
    text-align: center;
 }
+
 #comment{
-    background-color: cornflowerblue;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
 }
+
 #addComments {
     width: 20%;
     padding: 5px;
-    background-color: darkblue;
+    background-color: rgb(143, 143, 209);
+    border-radius: 7px;
     color: white;
     align-self: center;
 }
@@ -328,6 +335,11 @@ input[type=text]:invalid {
     background-color: darkblue;
     color: white;
 }
+
+
+
+
+
 
 
 
