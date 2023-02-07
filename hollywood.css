@@ -194,9 +194,16 @@ h2 {
     border: 1px solid gray;
     border-radius: 10px;
 }
-  
+
+.comment-submit-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 textarea {
-    width: 100%;
+    width: 50%;
     height: 50px;
     resize: none;
 }
