@@ -46,6 +46,10 @@ h2 {
     font-size: 40px;
 }
 
+p {
+    color: silver;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -286,12 +290,53 @@ h2 {
     display: none;
 }
 
+
+
+* {
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type=text]:invalid {
+    border: red solid 1px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.container > label {
+   text-align: center;
+}
+#comment{
+    background-color: cornflowerblue;
+}
+#addComments {
+    width: 20%;
+    padding: 5px;
+    background-color: darkblue;
+    color: white;
+    align-self: center;
+}
+
+.wrapper > button {
+    margin-right: 5px;
+    padding: 5px;
+    background-color: darkblue;
+    color: white;
+}
+
+
+
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 159px;
+    height: 160px;
     background-color: silver;
     color: black;
     text-align: center;
