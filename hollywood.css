@@ -85,6 +85,16 @@ h2 {
     margin-right: 10px;
 }
 
+.images span {
+    width: 50%;
+}
+
+@media (max-width: 1000px) {
+    .images span {
+      width: 100%;
+    }
+}
+
 .container .buttons {
     display: flex;
     justify-content: space-between;
