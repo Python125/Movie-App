@@ -285,3 +285,15 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+function submitComment() {
+  const comment = document.getElementById("comment").value;
+  const commentsDiv = document.getElementById("comments");
+  
+  const newComment = document.createElement("div");
+  newComment.innerHTML = comment;
+
+  commentsDiv.appendChild(newComment);
+
+  document.getElementById("comment").value = "";
+}
