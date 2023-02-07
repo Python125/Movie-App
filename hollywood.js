@@ -293,6 +293,27 @@ function closeModal(modal) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.onload = function setTemplate() {
   document.getElementById('allComments').innerHTML = localStorage.getItem('template');
 };
