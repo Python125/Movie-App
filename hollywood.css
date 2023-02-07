@@ -56,10 +56,10 @@ h2 {
     padding: 0;
 }
 
-.container1 {
+.container {
     max-width: 1700px;
     width: 1700px;
-    height: 530px;
+    height: 520px;
     margin: 0px auto;
     position: relative;
     border-radius: 10px;
@@ -68,7 +68,7 @@ h2 {
     overflow: hidden;
 }
 
-.container1 .images {
+.container .images {
     position: absolute;
     display: flex;
     width: 100%;
@@ -78,14 +78,24 @@ h2 {
     transition: 250ms;
 }
 
-.container1 .images img {
-    max-width: 300px;
+.container .images img {
+    max-width: 1000px;
     width: auto;
     position: relative;
     margin-right: 10px;
 }
 
-.container1 .buttons {
+.images span {
+    width: 48%;
+}
+
+@media (max-width: 1000px) {
+    .images span {
+      width: 100%;
+    }
+}
+
+.container .buttons {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -94,168 +104,30 @@ h2 {
     bottom: 0;
 }
 
-.container1 .buttons  i {
+.container .buttons  i {
 	font-size: 30px;
 	color: black;
 }
 
-.container2 {
-    max-width: 1700px;
-    width: 1700px;
-    height: 530px;
-    margin: 0px auto;
-    position: relative;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px 2px;
-    overflow: hidden;
-}
-
-.container2 .images {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 90%;
-    top: 0;
-    left: 0;
-    transition: 250ms;
-}
-
-.container2 .images img {
-    max-width: 300px;
-    width: auto;
-    position: relative;
-    margin-right: 10px;
-}
-
-.container2 .buttons {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: 0;
-}
-
-.container2 .buttons  i {
-	font-size: 30px;
-	color: black;
-}
-
-.container3 {
-    max-width: 1700px;
-    width: 1700px;
-    height: 410px;
-    margin: 0px auto;
-    position: relative;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px 2px;
-    overflow: hidden;
-}
-
-.container3 .images {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 90%;
-    top: 0;
-    left: 0;
-    transition: 250ms;
-}
-
-.container3 .images img {
-    max-width: 300px;
-    width: auto;
-    position: relative;
-    margin-right: 10px;
-}
-
-.container3 .buttons {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: 0;
-}
-
-.container3 .buttons  i {
-	font-size: 30px;
-	color: black;
-}
-
-.container1 .previous,
+.container .previous,
 .next {
   width: 2%;
   height: 50px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
   outline: none;
-  text-align: center;
   cursor: pointer;
 }
 
-.container1 .previous {
+.container .previous {
     margin-left: 0px;
     justify-content: center;
 }
 
-.container1 .previous {
-    margin-left: 0px;
-    justify-content: center;
-}
-
-.container2 .previous,
-.next {
-  width: 2%;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  outline: none;
-  text-align: center;
-  cursor: pointer;
-}
-
-.container2 .previous {
-    margin-left: 0px;
-    justify-content: center;
-}
-
-.container2 .previous {
-    margin-left: 0px;
-    justify-content: center;
-}
-
-.container3 .previous,
-.next {
-  width: 2%;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  outline: none;
-  text-align: center;
-  cursor: pointer;
-}
-
-.container3 .previous {
-    margin-left: 0px;
-    justify-content: center;
-}
-
-.container3 .previous {
+.container .previous {
     margin-left: 0px;
     justify-content: center;
 }
