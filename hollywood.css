@@ -198,8 +198,11 @@ h2 {
 .comment-submit-button {
     background-color: white;
     color: black;
-    padding: 10px 20px;
+    width: 90px;
+    height: 40px;
     border-radius: 10px;
+    text-align: center;
+    justify-content: center;
 }
 
 textarea {
