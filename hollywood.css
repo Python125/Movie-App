@@ -1,4 +1,4 @@
-body,html {
+body,html{
     height: 100%;
     align-items:center;
     justify-content: center;
@@ -118,7 +118,7 @@ h2 {
     justify-content: center;
 }
 
-.container .previous {
+.container .next {
     margin-left: 0px;
     justify-content: center;
 }
