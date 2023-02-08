@@ -1,315 +1,393 @@
-body,html{
-    height: 100%;
-    align-items:center;
-    justify-content: center;
-    background-color: silver;
+const slider1 = document.getElementById("slider1");
+const slider2 = document.getElementById("slider2");
+const slider3 = document.getElementById("slider3");
+
+const prev1 = document.getElementById("prev1");
+const next1 = document.getElementById("next1");
+const prev2 = document.getElementById("prev2");
+const next2 = document.getElementById("next2");
+const prev3 = document.getElementById("prev3");
+const next3 = document.getElementById("next3");
+
+const image_width = parseFloat(window.getComputedStyle(slider1.querySelectorAll("img")[0]).getPropertyValue("width"));
+const image_margin_right = parseFloat(window.getComputedStyle(slider1.querySelectorAll("img")[0]).getPropertyValue("margin-right"));
+
+function image_copy_add(slider) {
+  let images = slider.querySelectorAll("img");
+  for (let i = 0; i <= 0; i++) {
+    images.forEach(function(item) {
+      let img = document.createElement("img");
+      let a_tag = document.createElement("a");
+      a_tag.href = "#";
+      img.src = item.src;
+      a_tag.appendChild(img);
+      slider.appendChild(a_tag);
+    });
+  }
 }
 
-:root {
-    font-size: 22px;
-    text-align: center;
-    font-family: Arial;
+image_copy_add(slider1);
+image_copy_add(slider2);
+image_copy_add(slider3);
+
+function previous_function(slider) {
+  let left = parseFloat(window.getComputedStyle(slider).getPropertyValue("left"));
+  if (left < 0) {
+    left = left + (image_width + image_margin_right);
+    slider.style.left = left + "px";
+  }
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+function next_function(slider) {
+  let left = parseFloat(window.getComputedStyle(slider).getPropertyValue("left"));
+  slider.querySelectorAll("img");
+  left = left - (image_width + image_margin_right);
+  slider.style.left = left + "px";
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Limelight';
-    font-size: 95px;
-    color: black;
+prev1.addEventListener("click", () => {
+  previous_function(slider1);
+});
+
+next1.addEventListener("click", () => {
+  next_function(slider1);
+});
+
+prev2.addEventListener("click", () => {
+  previous_function(slider2);
+});
+
+next2.addEventListener("click", () => {
+  next_function(slider2);
+});
+
+prev3.addEventListener("click", () => {
+  previous_function(slider3);
+});
+
+next3.addEventListener("click", () => {
+  next_function(slider3);
+});
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
 }
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+let btn = document.getElementById('btn');
+let output = document.getElementById('output');
+let quotes = [
+
+    '"<b><i>Mother of Mercy! Is this the end of Rico?</i></b>" <br><br> Caesar Enrico Bandello - played by <u>Edward G. Robinson</u> <br><br> (<i>Little Caesar</i>, <b>1931</b>)',
+    '"<b><i>I never drink... wine.</i></b>" <br><br> Count Dracula - played by <u>Bela Lugosi</u> <br><br> (<i>Dracula</i>, <b>1931</b>)',
+    '"<b><i>Listen, Little Boy, in this business there`s only one law you gotta follow to keep out of trouble: Do it first, do it yourself, and keep on doing it.</i></b>" <br><br> Tony Camonte - played by <u>Paul Muni</u> <br><br> (<i>Scarface</i>, <b>1932</b>)',
+    '"<b><i>I can see you right now in the kitchen, bending over a hot stove. But I can`t see the stove.</i></b>" <br><br> Rufus T. Firefly - played by <u>Groucho Marx</u> <br><br> (<i>Duck Soup</i>, <b>1933</b>)',
+    '"<b><i>Alone: bad. Friend: good!</i></b>" <br><br> The Monster - played by <u>Boris Karloff</u> <br><br> (<i>Bride of Frankenstein</i>, <b>1935</b>)"',
+    '"<b><i>When I invite a woman to dinner I expect her to look at my face.</i></b>" <br><br> Otis B. Driftwood - played by <u>Groucho Marx</u> <br><br> (<i>A Night at the Opera</i>, <b>1935</b>)',
+    '"<b><i>It seems I`m always ringside at the first fight... and the last.</i></b>" <br><br> Louise `Fluff` Phillips - played by <u>Bette Davis</u> <br><br> (<i>Kid Galahad</i>, <b>1937</b>)',
+    '"<b><i>To be afraid, you gotta have a heart. I don`t think I got one. I had that cut out of me a long time ago.</i></b>" <br><br> Rocky Sullivan - played by <u>James Cagney</u> <br><br> (<i>Angels with Dirty Faces</i>, <b>1938</b>)',
+    '"<b><i>Toto, I`ve a feeling we`re not in Kansas anymore.</i></b>" <br><br> Dorothy - played by <u>Judy Garland</u> <br><br> (<i>The Wizard of Oz</i>, <b>1939</b>)',
+    '"<b><i>Frankly, my dear, I don`t give a damn.</i></b>" <br><br> Rhett Butler - played by <u>Clark Gable</u> <br><br> (<i>Gone with the Wind</i>, <b>1939</b>)',
+
+    '"<b><i>Rosebud.</i></b>" <br><br> Charles Foster Kane - played by <u>Orson Welles</u> <br><br> (<i>Citizen Kane</i>, <b>1941</b>)',
+    '"<b><i>Of all the gin joints, in all the towns, in all the world, she walks into mine.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> <br><br> (<i>Casablanca</i>, <b>1942</u>)',
+    '"<b><i>Here`s looking at you, kid.</i></b>" <br><br> Rick - played by <u>Humphrey Bogart</u> <br><br> (<i>Casablanca</i>, <b>1942</b>)',
+    '"<b><i>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</i></b>" <br><br> Sheridan Whiteside - <u>Monty Woolley</u> <br><br> (<i>The Man Who Came to Dinner</i>, <b>1942</b>)',
+    '"<b><i>Public enemy, he calls me!</i></b>" <br><br> Johnny Rocco - played by <u>Edward G. Robinson</u> <br><br> (<i>Key Largo</i>, <b>1948</b>)',
+    '"<b><i>Made it, Ma! Top of the world!</i></b>" <br><br> Cody Jarrett - played by <u>James Cagney</u> <br><br> (<i>White Heat</i>, <b>1949</b>)',
+];
+
+btn.addEventListener('click', function(){
+    let randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    output.innerHTML = randomQuote;
+})
+
+const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
+const questionContainerElement = document.getElementById('question-container')
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
+
+let shuffledQuestions, currentQuestionIndex
+
+startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++
+  setNextQuestion()
+})
+
+function startGame() {
+  startButton.classList.add('hide')
+  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  currentQuestionIndex = 0
+  questionContainerElement.classList.remove('hide')
+  setNextQuestion()
+}
+
+function setNextQuestion() {
+  resetState()
+  showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question) {
+  questionElement.innerText = question.question
+  question.answers.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('btn')
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click', selectAnswer)
+    answerButtonsElement.appendChild(button)
+  })
+}
+
+function resetState() {
+  clearStatusClass(document.body)
+  nextButton.classList.add('hide')
+  while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+  }
+}
+
+function selectAnswer(e) {
+  const selectedButton = e.target
+  const correct = selectedButton.dataset.correct
+  setStatusClass(document.body, correct)
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+  })
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove('hide')
+  } else {
+    startButton.innerText = 'Restart'
+    startButton.classList.remove('hide')
+  }
+}
+
+function setStatusClass(element, correct) {
+  clearStatusClass(element)
+  if (correct) {
+    element.classList.add('correct')
+  } else {
+    element.classList.add('wrong')
+  }
+}
+
+function clearStatusClass(element) {
+  element.classList.remove('correct')
+  element.classList.remove('wrong')
+}
+
+const questions = [
+  {
+    question: 'What is the only movie from the 1930s to win all five major Academy Awards?',
+    answers: [
+      { text: 'The Wizard of Oz', correct: false },
+      { text: 'Top Hat', correct: false },
+      { text: 'Gone with the Wind', correct: false },
+      { text: 'It Happened One Night', correct: true }
+    ]
+  },
+  {
+    question: 'What is the only movie that starred both Edward G. Robinson and James Cagney?',
+    answers: [
+      { text: 'Double Indemnity', correct: false },
+      { text: 'Smart Money', correct: true },
+      { text: 'A Slight Case of Murder', correct: false },
+      { text: 'Picture Snatcher', correct: false }
+    ]
+  },
+  {
+    question: 'What year was Bette Davis born?',
+    answers: [
+      { text: '1900', correct: false },
+      { text: '1920', correct: false },
+      { text: '1895', correct: false },
+      { text: '1908', correct: true }
+    ]
+  },
+  {
+    question: 'In 1999, what movie was considered the greatest British film of all time?',
+    answers: [
+      { text: 'The Third Man', correct: true },
+      { text: 'Brief Encounter', correct: false },
+      { text: 'The 39 Steps', correct: false },
+      { text: 'Great Expectations', correct: false }
+    ]
+  },
+  {
+    question: 'Which actress has the most Oscar wins?',
+    answers: [
+      { text: 'Bette Davis', correct: false },
+      { text: 'Katharine Hepburn', correct: true },
+      { text: 'Lauren Becall', correct: false },
+      { text: 'Ingrid Bergman', correct: false }
+    ]
+  },
+  {
+    question: 'What year was Humphrey Bogart born?',
+    answers: [
+      { text: '1899', correct: true },
+      { text: '1900', correct: false },
+      { text: '1890', correct: false },
+      { text: '1880', correct: false }
+    ]
+  },
+  {
+    question: 'What is James Cagney`s favorite role?',
+    answers: [
+      { text: 'Angels with Dirty Faces', correct: false },
+      { text: 'G Men', correct: false },
+      { text: 'The Public Enemy', correct: false },
+      { text: 'Yankee Doodle Dandy', correct: true }
+    ]
+  },
+  {
+    question: 'Which movie does NOT star Humphrey Bogart?',
+    answers:[
+      { text: 'Casablanca', correct: false },
+      { text: 'Each Dawn I Die', correct: true },
+      { text: 'The Oklahoma Kid', correct: false },
+      { text: 'Kid Galahad', correct: false }
+    ]
+  },
+  {
+    question: 'Who won best actor at the Academy Awards in 1939?',
+    answers:[
+      { text: 'Leslie Howard', correct: false },
+      { text: 'Spencer Tracy', correct: true },
+      { text: 'James Cagney', correct: false },
+      { text: 'Robert Donat', correct: false }
+    ]
+  },
+  {
+    question: 'What was the most successful movie starring the Marx Brothers?',
+    answers:[
+      { text: 'Animals Crackers (1930)', correct: false },
+      { text: 'A Night at the Opera (1935)', correct: false },
+      { text: 'Horse Feathers (1932)', correct: false },
+      { text: 'Duck Soup (1933)', correct: true }
+    ]
+  },
+  {
+    question: '?',
+    answers:[
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: true }
+    ]
+  },
+  {
+    question: '?',
+    answers:[
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: false },
+      { text: '', correct: true }
+    ]
+  },
+]
+
+// This function is called when the user submits a comment
+function submitComment() {
+  const comment = document.getElementById("comment").value;
+  const commentsDiv = document.getElementById("comments");
   
-.highlight-word-color1{
-    color: #d1a746;
-    text-align: center;
-    font-family: 'Limelight';
-    font-size: 95px;
+  const newCommentContainer = document.createElement("div");
+
+  const newComment = document.createElement("div");
+  newComment.innerHTML = comment;
+  newCommentContainer.appendChild(newComment);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.innerHTML = "Delete";
+  deleteButton.classList.add("delete-button");
+  deleteButton.onclick = function() {
+    commentsDiv.removeChild(newCommentContainer);
+
+    // Remove the comment from local storage
+    const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
+    const index = existingComments.indexOf(comment);
+    if (index !== -1) {
+      existingComments.splice(index, 1);
+      localStorage.setItem("comments", JSON.stringify(existingComments));
+    }
+  };
+  newCommentContainer.appendChild(deleteButton);
+
+  commentsDiv.appendChild(newCommentContainer);
+
+  // Save the comment to local storage
+  const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
+  existingComments.push(comment);
+  localStorage.setItem("comments", JSON.stringify(existingComments));
+
+  document.getElementById("comment").value = "";
 }
 
-h2 {
-    text-align: center;
-    font-family: 'Limelight';
-    font-size: 40px;
-    color: black;
-}
+// This function is called when the page loads
+window.onload = function() {
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  const commentsDiv = document.getElementById("comments");
 
-.highlight-word-color2{
-    color: #d1a746;
-    text-align: center;
-    font-family: 'Limelight';
-    font-size: 40px;
-}
+  comments.forEach(function(comment) {
+    const newCommentContainer = document.createElement("div");
 
-*{
-    margin: 0;
-    padding: 0;
-}
+    const newComment = document.createElement("div");
+    newComment.innerHTML = comment;
+    newCommentContainer.appendChild(newComment);
 
-*{
-    margin: 0;
-    padding: 0;
-}
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.classList.add("delete-button");
+    deleteButton.onclick = function() {
+      commentsDiv.removeChild(newCommentContainer);
 
-.container {
-    max-width: 1700px;
-    width: 1700px;
-    height: 520px;
-    margin: 0px auto;
-    position: relative;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px 2px;
-    overflow: hidden;
-}
+      // Remove the comment from local storage
+      const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
+      const index = existingComments.indexOf(comment);
+      if (index !== -1) {
+        existingComments.splice(index, 1);
+        localStorage.setItem("comments", JSON.stringify(existingComments));
+      }
+    };
+    newCommentContainer.appendChild(deleteButton);
 
-.container .images {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 90%;
-    top: 0;
-    left: 0;
-    transition: 250ms;
-}
-
-.container .images img {
-    max-width: 1000px;
-    width: auto;
-    position: relative;
-    margin-right: 10px;
-}
-
-.container .buttons {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: 0;
-}
-
-.container .buttons  i {
-	font-size: 30px;
-	color: black;
-    justify-content: center;
-}
-
-.container .previous,
-.next {
-  width: 2%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-}
-
-.container .previous {
-    margin-left: 0px;
-    justify-content: center;
-}
-
-.container .previous {
-    margin-left: 0px;
-    justify-content: center;
-}
-
-.modal {
-    width: 700px;
-    height: 500px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 300ms ease-in-out;
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: white;
-    max-width: 80%;
-    overflow: scroll;
-}
-
-.modal.active {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-header {
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-}
-  
-.modal-header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-  
-.modal-header .close-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-  
-.modal-body {
-    padding: 10px 15px;
-}
-  
-#overlay {
-    position: fixed;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
-    pointer-events: none;
-}
-  
-#overlay.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-
-#comment-section {
-    width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.comment-submit-button {
-    background-color: white;
-    color: black;
-    width: 90px;
-    height: 40px;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center;
-}
-
-textarea {
-    width: 50%;
-    height: 50px;
-    resize: none;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 160px;
-    background-color: silver;
-    color: black;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#container {
-    border: 1px solid black;
-    height: 500px;
-    width: 900px;
-    margin: 0px auto;
-    text-align: center;
-    border-radius: 10px;
-}
-
-#btn {
-    border-radius: 10px;
-    padding: 5px;
-    color: black;
-    text-align: center;
-    justify-content: center;
-    height: 65px;
-    width: 150px;
-    font-size: 23px;
-    cursor: pointer;
-
-}
-
-#output {
-    margin: 25px auto;
-    font-size: 26px;
-    color: rgb(0, 0, 0);
-}
-
-.element1 {
-    height: 500px;
-    width: 700px;
-    margin: auto;
-    text-align: center;
-}
-
-.element2 {
-    height: 500px;
-    width: 700px;
-    margin: auto;
-    text-align: center;
-}
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    gap: 10px;
-    margin: 10px;
-}
-
-.btn {
-    border-radius: 10px;
-    padding: 5px;
-    color: black;
-    text-align: center;
-    justify-content: center;
-    height: 65px;
-    width: 150px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    border-color: white;
-}
-
-.btn.correct {
-    background-color: rgb(71, 255, 71);
-}
-  
-.btn.wrong {
-    background-color: red;
-}
-
-.start-btn, .next-btn {
-    font-weight: bold;
-    padding: 10px 20px;
-    font-size: 23px;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hide {
-    display: none;
+    commentsDiv.appendChild(newCommentContainer);
+  });
 }
