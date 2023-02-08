@@ -395,8 +395,6 @@ window.onload = function() {
 
 
 
-
-
 function submitComment() {
   // Get the value of the comment
   const comment = document.getElementById("comment").value;
