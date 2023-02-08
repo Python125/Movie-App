@@ -1,35 +1,72 @@
-const sliderContainers = document.querySelectorAll(".container");
-sliderContainers.forEach((container) => {
-  const images = container.querySelectorAll(".images img");
-  const prevButton = container.querySelector(".buttons .previous");
-  const nextButton = container.querySelector(".buttons .next");
-  let currentImageIndex = 0;
+const slider1 = document.getElementById("slider1");
+const slider2 = document.getElementById("slider2");
+const slider3 = document.getElementById("slider3");
 
-  const showImage = (imageIndex) => {
-    images.forEach((img, index) => {
-      if (index === imageIndex) {
-        img.style.display = "block";
-      } else {
-        img.style.display = "none";
-      }
+const prev1 = document.getElementById("prev1");
+const next1 = document.getElementById("next1");
+const prev2 = document.getElementById("prev2");
+const next2 = document.getElementById("next2");
+const prev3 = document.getElementById("prev3");
+const next3 = document.getElementById("next3");
+
+const image_width = parseFloat(window.getComputedStyle(slider1.querySelectorAll("img")[0]).getPropertyValue("width"));
+const image_margin_right = parseFloat(window.getComputedStyle(slider1.querySelectorAll("img")[0]).getPropertyValue("margin-right"));
+
+function image_copy_add(slider) {
+  let images = slider.querySelectorAll("img");
+  for (let i = 0; i <= 0; i++) {
+    images.forEach(function(item) {
+      let img = document.createElement("img");
+      let a_tag = document.createElement("a");
+      a_tag.href = "#";
+      img.src = item.src;
+      a_tag.appendChild(img);
+      slider.appendChild(a_tag);
     });
-  };
+  }
+}
 
-  prevButton.addEventListener("click", () => {
-    currentImageIndex--;
-    if (currentImageIndex < 0) {
-      currentImageIndex = images.length - 1;
-    }
-    showImage(currentImageIndex);
-  });
+image_copy_add(slider1);
+image_copy_add(slider2);
+image_copy_add(slider3);
 
-  nextButton.addEventListener("click", () => {
-    currentImageIndex++;
-    if (currentImageIndex === images.length) {
-      currentImageIndex = 0;
-    }
-    showImage(currentImageIndex);
-  });
+function previous_function(slider) {
+  let left = parseFloat(window.getComputedStyle(slider).getPropertyValue("left"));
+  if (left < 0) {
+    left = left + (image_width + image_margin_right);
+    slider.style.left = left + "px";
+  }
+}
+
+function next_function(slider) {
+  let left = parseFloat(window.getComputedStyle(slider).getPropertyValue("left"));
+  slider.querySelectorAll("img");
+  left = left - (image_width + image_margin_right);
+  slider.style.left = left + "px";
+}
+
+prev1.addEventListener("click", () => {
+  previous_function(slider1);
+});
+
+next1.addEventListener("click", () => {
+  next_function(slider1);
+});
+
+prev2.addEventListener("click", () => {
+  previous_function(slider2);
+});
+
+next2.addEventListener("click", () => {
+  next_function(slider2);
+});
+
+prev3.addEventListener("click", () => {
+  previous_function(slider3);
+});
+
+next3.addEventListener("click", () => {
+  next_function(slider3);
 });
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
