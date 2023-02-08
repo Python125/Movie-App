@@ -313,8 +313,3 @@ footer {
 .hide {
     display: none;
 }
-
-/*As stated in the HTML file, this "p" section is only used for spacing */
-p {
-    color: silver;
-}
