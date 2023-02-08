@@ -286,14 +286,71 @@ const questions = [
   },
 ]
 
+// This function is called when the user submits a comment
 function submitComment() {
   const comment = document.getElementById("comment").value;
   const commentsDiv = document.getElementById("comments");
   
+  const newCommentContainer = document.createElement("div");
+
   const newComment = document.createElement("div");
   newComment.innerHTML = comment;
+  newCommentContainer.appendChild(newComment);
 
-  commentsDiv.appendChild(newComment);
+  const deleteButton = document.createElement("button");
+  deleteButton.innerHTML = "Delete";
+  deleteButton.classList.add("delete-button");
+  deleteButton.onclick = function() {
+    commentsDiv.removeChild(newCommentContainer);
+
+    // Remove the comment from local storage
+    const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
+    const index = existingComments.indexOf(comment);
+    if (index !== -1) {
+      existingComments.splice(index, 1);
+      localStorage.setItem("comments", JSON.stringify(existingComments));
+    }
+  };
+  newCommentContainer.appendChild(deleteButton);
+
+  commentsDiv.appendChild(newCommentContainer);
+
+  // Save the comment to local storage
+  const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
+  existingComments.push(comment);
+  localStorage.setItem("comments", JSON.stringify(existingComments));
 
   document.getElementById("comment").value = "";
+}
+
+// This function is called when the page loads
+window.onload = function() {
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  const commentsDiv = document.getElementById("comments");
+
+  comments.forEach(function(comment) {
+    const newCommentContainer = document.createElement("div");
+
+    const newComment = document.createElement("div");
+    newComment.innerHTML = comment;
+    newCommentContainer.appendChild(newComment);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.classList.add("delete-button");
+    deleteButton.onclick = function() {
+      commentsDiv.removeChild(newCommentContainer);
+
+      // Remove the comment from local storage
+      const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
+      const index = existingComments.indexOf(comment);
+      if (index !== -1) {
+        existingComments.splice(index, 1);
+        localStorage.setItem("comments", JSON.stringify(existingComments));
+      }
+    };
+    newCommentContainer.appendChild(deleteButton);
+
+    commentsDiv.appendChild(newCommentContainer);
+  });
 }
