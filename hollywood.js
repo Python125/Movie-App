@@ -391,3 +391,36 @@ window.onload = function() {
     commentsDiv.appendChild(newCommentContainer);
   });
 }
+
+
+
+
+
+
+function submitComment() {
+  // Get the value of the comment
+  const comment = document.getElementById("comment").value;
+
+  // Get the current date and time
+  const date = new Date();
+
+  // Format the date and time
+  const formattedDate = date.toLocaleString();
+
+  // Create a new element for the comment
+  const commentEl = document.createElement("div");
+
+  // Create a new element for the timestamp
+  const timestampEl = document.createElement("p");
+
+  // Set the text content of the comment and timestamp elements
+  commentEl.textContent = comment;
+  timestampEl.textContent = `Comment posted on ${formattedDate}`;
+
+  // Add the comment and timestamp elements to the comment container
+  commentEl.appendChild(timestampEl);
+  document.getElementById("comments").appendChild(commentEl);
+
+  // Clear the comment form
+  document.getElementById("comment").value = "";
+}
