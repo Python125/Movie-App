@@ -14,7 +14,7 @@ app.post("/submit-comment", (req, res) => {
 
   // Use a nodemailer transport to send an email to yourself with the comment
   const transporter = nodemailer.createTransport({
-    service: "comcast",
+    service: "email-service",
     auth: {
       user: "your-email-address",
       pass: "your-email-password"
