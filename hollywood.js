@@ -405,14 +405,14 @@ app.post("/submit-comment", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "PythonMonty",
-      pass: "EEo7Ts@RcgFDeP&H"
+      user: $(username),
+      pass: $(password)
     }
   });
 
   const mailOptions = {
     from: email,
-    to: "andrewnovosel90@gmail.com",
+    to: email,
     subject: "New Comment Submitted",
     text: comment
   };
