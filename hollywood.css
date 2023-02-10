@@ -51,11 +51,6 @@ h2 {
     padding: 0;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     max-width: 1700px;
     width: 1700px;
@@ -111,11 +106,6 @@ h2 {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-}
-
-.container .previous {
-    margin-left: 0px;
-    justify-content: center;
 }
 
 .container .previous {
