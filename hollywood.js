@@ -434,6 +434,52 @@ window.onload = function() {
 
 
 
+// Get the comments container element
+const commentsContainer = document.getElementById("comments-container");
+
+// Check if there are any saved comments in local storage
+const savedComments = localStorage.getItem("comments");
+
+// If there are saved comments, insert them into the comments container
+if (savedComments) {
+  commentsContainer.innerHTML = savedComments;
+}
+
+// Listen for the submit event on the comment form
+const commentForm = document.getElementById("comment-form");
+commentForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Get the comment input field
+  const commentInput = document.getElementById("comment-input");
+
+  // Create a new element for the comment
+  const newComment = document.createElement("div");
+  newComment.innerHTML = commentInput.value;
+
+  // Add the new comment to the comments container
+  commentsContainer.appendChild(newComment);
+
+  // Save the comments to local storage
+  localStorage.setItem("comments", commentsContainer.innerHTML);
+
+  // Clear the comment input field
+  commentInput.value = "";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -470,13 +516,6 @@ expressApp.post('/submit_comment', (req, res) => {
 expressApp.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
-
-
-
-
-
-
-
 
 
 
