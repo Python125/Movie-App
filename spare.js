@@ -1,85 +1,3 @@
-// This function is called when the user submits a comment
-function submitComment() {
-  const comment = document.getElementById("comment").value;
-  const commentsDiv = document.getElementById("comments");
-
-  const newCommentContainer = document.createElement("div");
-
-  const newComment = document.createElement("div");
-  newComment.innerHTML = comment;
-  newCommentContainer.appendChild(newComment);
-
-  const dateTime = new Date();
-  const formattedDateTime = dateTime.toLocaleString();
-  const dateTimeElement = document.createElement("div");
-  dateTimeElement.innerHTML = formattedDateTime;
-  newCommentContainer.appendChild(dateTimeElement);
-
-  const deleteButton = document.createElement("button");
-  deleteButton.innerHTML = "Delete";
-  deleteButton.classList.add("delete-button");
-  deleteButton.onclick = function() {
-    commentsDiv.removeChild(newCommentContainer);
-
-    // Remove the comment from local storage
-    const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
-    const index = existingComments.indexOf(comment);
-    if (index !== -1) {
-      existingComments.splice(index, 1);
-      localStorage.setItem("comments", JSON.stringify(existingComments));
-    }
-  };
-  newCommentContainer.appendChild(deleteButton);
-
-  commentsDiv.appendChild(newCommentContainer);
-
-  // Save the comment and its date/time to local storage
-  const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
-  existingComments.push({ comment, dateTime: formattedDateTime });
-  localStorage.setItem("comments", JSON.stringify(existingComments));
-
-  document.getElementById("comment").value = "";
-}
-
-// This function is called when the page loads
-window.onload = function() {
-  const comments = JSON.parse(localStorage.getItem("comments")) || [];
-  const commentsDiv = document.getElementById("comments");
-
-  comments.forEach(function(commentObject) {
-    const newCommentContainer = document.createElement("div");
-
-    const newComment = document.createElement("div");
-    newComment.innerHTML = commentObject.comment;
-    newCommentContainer.appendChild(newComment);
-
-    const dateTimeElement = document.createElement("div");
-    dateTimeElement.innerHTML = commentObject.dateTime;
-    newCommentContainer.appendChild(dateTimeElement);
-
-    const deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "Delete";
-    deleteButton.classList.add("delete-button");
-    deleteButton.onclick = function() {
-      commentsDiv.removeChild(newCommentContainer);
-
-// Remove the comment from local storage
-      const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
-      const index = existingComments.indexOf(commentObject);
-      if (index !== -1) {
-        existingComments.splice(index, 1);
-        localStorage.setItem("comments", JSON.stringify(existingComments));
-      }
-    };
-    newCommentContainer.appendChild(deleteButton);
-
-    commentsDiv.appendChild(newCommentContainer);
-  });
-}
-
-
-
-
 // Make a request using the Axios library
   axios.post('/send-email', {
     comment: comment
@@ -170,4 +88,57 @@ app.post("/send-email", (req, res) => {
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post('/submit-comment', (req, res) => {
+  const comment = req.body.comment;
+
+  // Use a nodemailer transport to send an email to yourself with the comment
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'username',
+      pass: 'password'
+    }
+  });
+
+  const mailOptions = {
+    from: 'youremail@gmail.com',
+    to: 'youremail@gmail.com',
+    subject: 'New Comment Submitted',
+    text: comment
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.send('Comment submitted successfully');
+    }
+  });
+});
+
+app.listen(3000, () => {
+  console.log('App listening on port 3000');
 });
