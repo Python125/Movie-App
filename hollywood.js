@@ -303,36 +303,60 @@ const questions = [
       { text: 'Duck Soup (1933)', correct: true }
     ]
   },
-  {
-    question: '?',
-    answers:[
-      { text: '', correct: false },
-      { text: '', correct: false },
-      { text: '', correct: false },
-      { text: '', correct: true }
-    ]
-  },
-  {
-    question: '?',
-    answers:[
-      { text: '', correct: false },
-      { text: '', correct: false },
-      { text: '', correct: false },
-      { text: '', correct: true }
-    ]
-  },
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // This function is called when the user submits a comment
 function submitComment() {
   const comment = document.getElementById("comment").value;
   const commentsDiv = document.getElementById("comments");
-  
+
+  // Make a request using the Axios library
+  axios.post('/send-email', {
+    comment: comment
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
   const newCommentContainer = document.createElement("div");
 
   const newComment = document.createElement("div");
   newComment.innerHTML = comment;
   newCommentContainer.appendChild(newComment);
+
+  const dateTime = new Date();
+  const formattedDateTime = dateTime.toLocaleString();
+  const dateTimeElement = document.createElement("div");
+  dateTimeElement.innerHTML = formattedDateTime;
+  newCommentContainer.appendChild(dateTimeElement);
 
   const deleteButton = document.createElement("button");
   deleteButton.innerHTML = "Delete";
@@ -352,9 +376,9 @@ function submitComment() {
 
   commentsDiv.appendChild(newCommentContainer);
 
-  // Save the comment to local storage
+  // Save the comment and its date/time to local storage
   const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
-  existingComments.push(comment);
+  existingComments.push({ comment, dateTime: formattedDateTime });
   localStorage.setItem("comments", JSON.stringify(existingComments));
 
   document.getElementById("comment").value = "";
@@ -365,12 +389,16 @@ window.onload = function() {
   const comments = JSON.parse(localStorage.getItem("comments")) || [];
   const commentsDiv = document.getElementById("comments");
 
-  comments.forEach(function(comment) {
+  comments.forEach(function(commentObject) {
     const newCommentContainer = document.createElement("div");
 
     const newComment = document.createElement("div");
-    newComment.innerHTML = comment;
+    newComment.innerHTML = commentObject.comment;
     newCommentContainer.appendChild(newComment);
+
+    const dateTimeElement = document.createElement("div");
+    dateTimeElement.innerHTML = commentObject.dateTime;
+    newCommentContainer.appendChild(dateTimeElement);
 
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete";
@@ -378,9 +406,9 @@ window.onload = function() {
     deleteButton.onclick = function() {
       commentsDiv.removeChild(newCommentContainer);
 
-      // Remove the comment from local storage
+// Remove the comment from local storage
       const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
-      const index = existingComments.indexOf(comment);
+      const index = existingComments.indexOf(commentObject);
       if (index !== -1) {
         existingComments.splice(index, 1);
         localStorage.setItem("comments", JSON.stringify(existingComments));
@@ -395,30 +423,118 @@ window.onload = function() {
 
 
 
-function submitComment() {
-  // Get the value of the comment
-  const comment = document.getElementById("comment").value;
 
-  // Get the current date and time
-  const date = new Date();
 
-  // Format the date and time
-  const formattedDate = date.toLocaleString();
 
-  // Create a new element for the comment
-  const commentEl = document.createElement("div");
 
-  // Create a new element for the timestamp
-  const timestampEl = document.createElement("p");
 
-  // Set the text content of the comment and timestamp elements
-  commentEl.textContent = comment;
-  timestampEl.textContent = `Comment posted on ${formattedDate}`;
 
-  // Add the comment and timestamp elements to the comment container
-  commentEl.appendChild(timestampEl);
-  document.getElementById("comments").appendChild(commentEl);
 
-  // Clear the comment form
-  document.getElementById("comment").value = "";
-}
+
+
+
+
+
+
+
+
+
+const express = require('express');
+const expressApp = express();
+const port = 3000;
+const { Client } = require('pg');
+
+const client = new Client({
+  host: 'localhost',
+  user: 'postgres',
+  password: '',
+  database: 'comments_db'
+});
+
+client.connect();
+
+expressApp.use(express.json());
+
+expressApp.post('/submit_comment', (req, res) => {
+  var comment = req.body.comment;
+  client.query(
+    'INSERT INTO comments (text) VALUES ($1)',
+    [comment],
+    function(error, results) {
+      if (error) throw error;
+      res.send('Comment submitted');
+    }
+  );
+});
+
+expressApp.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const express = require("express");
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post("/send-email", (req, res) => {
+  const comment = req.body.comment;
+  const email = req.body.email;
+  
+  const transporter = nodemailer.createTransport({
+    host: "smtp.example.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "username",
+      pass: "password"
+    }
+  });
+
+  const mailOptions = {
+    from: email,
+    to: "receiver@example.com",
+    subject: "New Comment",
+    text: `A new comment has been posted: ${comment} (from ${email})`
+  };
+
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.log(error);
+      res.send({ message: "Error sending email" });
+    } else {
+      console.log("Email sent: " + info.response);
+      res.send({ message: "Email sent successfully" });
+    }
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
+});
