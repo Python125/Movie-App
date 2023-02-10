@@ -1522,9 +1522,12 @@
   </div>
 </div>
 <br>
+
+
 <div id="comment-section">
   <h3>If you have any questions, let me know in the comments below.</h3><br>
-  <form id="comment-form">
+  <form action="/submit-comment" method="post" id="comment-form">
+    <input type="text" name="email" placeholder="Your Email">
     <textarea id="comment"></textarea>
     <br><br>
     <button type="button" class="comment-submit-button" onclick="submitComment()">Submit</button>
@@ -1535,6 +1538,8 @@
     <!-- Your comments will be loaded here -->
   </div>
 </div>
+
+
 <br>
 <!--This <p> tag code is used to fully display the border of the comment section-->
   <p style="color:silver">Blah blah</p>
