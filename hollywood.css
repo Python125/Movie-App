@@ -193,6 +193,7 @@ h2 {
     padding: 20px;
     border: 1px solid black;
     border-radius: 10px;
+    font-size: 18px;
 }
 
 .comment-submit-button {
@@ -223,7 +224,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 160px;
+    height: 165px;
     background-color: silver;
     color: black;
     text-align: center;
