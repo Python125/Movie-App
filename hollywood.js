@@ -383,3 +383,51 @@ window.onload = function() {
     commentsDiv.appendChild(newCommentContainer);
   });
 }
+
+
+
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
+
+const app = express();
+const port = 5500;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post("/submit-comment", (req, res) => {
+  const email = req.body.email;
+  const comment = req.body.comment;
+
+  // Use a nodemailer transport to send an email to yourself with the comment
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "PythonMonty",
+      pass: "EEo7Ts@RcgFDeP&H"
+    }
+  });
+
+  const mailOptions = {
+    from: email,
+    to: "andrewnovosel90@gmail.com",
+    subject: "New Comment Submitted",
+    text: comment
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send("Error sending email");
+    } else {
+      console.log("Email sent: " + info.response);
+      res.send("Comment submitted successfully");
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
