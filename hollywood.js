@@ -305,7 +305,7 @@ const questions = [
   },
 ]
 
-// This function is called when the user submits a comment
+/* This function is called when the user submits a comment
 function submitComment() {
   const comment = document.getElementById("comment").value;
   const commentsDiv = document.getElementById("comments");
@@ -383,3 +383,13 @@ window.onload = function() {
     commentsDiv.appendChild(newCommentContainer);
   });
 }
+
+document.getElementById('comment-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const comment = document.getElementById('comment').value;
+
+  // Send the comment to the server
+});
+
+*/
