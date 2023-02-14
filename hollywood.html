@@ -1525,8 +1525,15 @@
 
 <div id="comment-section">
   <h3>Like what you see? Want to see more? Leave a comment.</h3><br>
-  <form id="comment-form">
-    <textarea id="comment"></textarea>
+  <form action="https://formsubmit.co/your@email.com" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="hidden" name="_next" value="thanks.html">
+
+    <label for="comment">Comment</label>
+    <textarea id="comment" name="comment"></textarea>
     <br><br>
     <button type="button" class="comment-submit-button" onclick="submitComment()">Submit</button>
   </form>
