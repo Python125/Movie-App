@@ -143,9 +143,10 @@ h2 {
     }
   }
 
-.modal {
+  .modal {
     width: 700px;
     height: 500px;
+    max-width: 80%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -155,7 +156,6 @@ h2 {
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    max-width: 80%;
     overflow: scroll;
 }
 
@@ -189,7 +189,7 @@ h2 {
     padding: 10px 15px;
 }
   
-#overlay {
+.overlay {
     position: fixed;
     opacity: 0;
     transition: 200ms ease-in-out;
@@ -200,12 +200,23 @@ h2 {
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
 }
+
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+    height: 90%;
+    max-width: none;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
   
 #overlay.active {
     opacity: 1;
     pointer-events: all;
 }
-
 
 #comment-section {
     width: 700px;
