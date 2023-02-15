@@ -230,13 +230,13 @@ h2 {
 .comment-submit-button {
     background-color: white;
     color: black;
-    width: 90px;
+    width: 100px;
     height: 40px;
     border-radius: 10px;
     font-size: 18px;
     text-align: center;
     justify-content: center;
-}
+  }
 
 textarea {
     width: 650px;
@@ -267,7 +267,7 @@ textarea {
   }
 
   .comment-submit-button {
-    width: 100%;
+    width: 100px;
     height: 40px;
     margin-top: 10px;
   }
