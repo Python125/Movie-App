@@ -204,7 +204,7 @@ h2 {
 @media screen and (max-width: 600px) {
   .modal {
     width: 90%;
-    height: 90%;
+    height: 65%;
     max-width: none;
   }
 
