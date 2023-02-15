@@ -90,9 +90,15 @@ h2 {
 }
 
 .container .buttons  i {
-	font-size: 23px;
-	color: black;
+    font-size: 23px;
+    color: black;
     justify-content: center;
+}
+
+
+.container iframe {
+    width: 570px;
+    height: 415px;
 }
 
 .container .previous,
