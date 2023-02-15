@@ -90,7 +90,7 @@ h2 {
 }
 
 .container .buttons  i {
-	font-size: 30px;
+	font-size: 23px;
 	color: black;
     justify-content: center;
 }
@@ -98,7 +98,7 @@ h2 {
 .container .previous,
 .next {
   width: 2%;
-  height: 50px;
+  height: 45px;
   display: flex;
   align-items: center;
   background-color: white;
