@@ -52,8 +52,8 @@ h2 {
 }
 
 .container {
-    max-width: 1600px;
-    width: 1600px;
+    max-width: 85%;
+    width: 85%;
     height: 520px;
     margin: 0px auto;
     position: relative;
@@ -112,6 +112,36 @@ h2 {
     margin-left: 0px;
     justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+    .container .previous,
+    .container .next {
+      width: 6%;
+    }
+  
+    .container .buttons i {
+      font-size: 20px;
+    }
+  
+    .container .images {
+      height: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .container .previous,
+    .container .next {
+      width: 20%;
+    }
+  
+    .container .buttons i {
+      font-size: 20px;
+    }
+  
+    .container .images {
+      height: 50%;
+    }
+  }
 
 .modal {
     width: 700px;
