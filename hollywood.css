@@ -99,6 +99,26 @@ h2 {
     width: 95%;
     height: 415px;
 }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 85%;
+    }
+    .container iframe {
+      width: 85%;
+      height: 225px;
+    }
+}
+  
+  @media screen and (max-width: 400px) {
+    .container {
+      max-width: 80%;
+    }
+    .container iframe {
+      width: 75%;
+      height: 150px;
+    }
+}
 
 .container .previous,
 .next {
@@ -117,6 +137,36 @@ h2 {
     margin-left: 0px;
     justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+    .container .previous,
+    .container .next {
+      width: 6%;
+    }
+  
+    .container .buttons i {
+      font-size: 20px;
+    }
+  
+    .container .images {
+      height: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .container .previous,
+    .container .next {
+      width: 20%;
+    }
+  
+    .container .buttons i {
+      font-size: 20px;
+    }
+  
+    .container .images {
+      height: 50%;
+    }
+  }
 
   .modal {
     width: 700px;
@@ -174,6 +224,18 @@ h2 {
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
 }
+
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+    height: 65%;
+    max-width: none;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
   
 #overlay.active {
     opacity: 1;
@@ -207,6 +269,32 @@ textarea {
     font-size: 18px;
     text-align: left;
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+  #comment-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  textarea {
+    width: 95%;
+    resize: none;
+    height: 150px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .comment-submit-button {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
 }
 
 footer {
@@ -270,6 +358,12 @@ footer {
     justify-content: center;
     gap: 10px;
     margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .btn-grid {
+        grid-template-columns: repeat(2, auto);
+    }
 }
 
 .btn {
