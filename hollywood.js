@@ -384,7 +384,7 @@ window.onload = function() {
   });
 }
 
-document.getElementById('comment-form').addEventListener('submit', (event) => {
+document.getElementById('comment-section').addEventListener('submit', (event) => {
   event.preventDefault();
 
   const comment = document.getElementById('comment').value;
