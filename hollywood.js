@@ -383,11 +383,3 @@ window.onload = function() {
     commentsDiv.appendChild(newCommentContainer);
   });
 }
-
-document.getElementById('comment-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const comment = document.getElementById('comment').value;
-
-  // Send the comment to the server
-});
