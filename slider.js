@@ -271,4 +271,8 @@ const sliderOneData = [
 
   next3.addEventListener("click", () => {
     next_function(slider3);
+<<<<<<< HEAD
   });
+=======
+  });
+>>>>>>> 01f4b4071e766d60c032302a5e558bb5920868be
