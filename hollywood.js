@@ -18,7 +18,15 @@ const sliderOneData = [
   },
   {
     src: '',
-    title: 'The Public Enemy (1931)'
+    title: 'The Public Enemy (1931)',
+  },
+  {
+    scr: '',
+    title: 'Little Caesar (1931)',
+  },
+  {
+    scr: '',
+    title: 'Smart Money (1931)',
   },
 ];
 
@@ -106,7 +114,7 @@ const loadSliderTwo = () => {
 
     const modalContainer = document.createElement('div');
     modalContainer.setAttribute('class', 'modal');
-    modalContainer.setAttribute('id', 'modal1');
+    modalContainer.setAttribute('id', 'modal2');
 
     const modalBody = document.createElement('div');
     modalBody.setAttribute('class', 'modal-body');
@@ -172,7 +180,7 @@ const loadSliderThree = () => {
 
     const modalContainer = document.createElement('div');
     modalContainer.setAttribute('class', 'modal');
-    modalContainer.setAttribute('id', 'modal1');
+    modalContainer.setAttribute('id', 'modal2');
 
     const modalBody = document.createElement('div');
     modalBody.setAttribute('class', 'modal-body');
