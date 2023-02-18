@@ -172,7 +172,7 @@ const loadSliderThree = () => {
 
     const modalContainer = document.createElement('div');
     modalContainer.setAttribute('class', 'modal');
-    modalContainer.setAttribute('id', 'modal2');
+    modalContainer.setAttribute('id', 'modal3');
 
     const modalBody = document.createElement('div');
     modalBody.setAttribute('class', 'modal-body');
@@ -585,6 +585,8 @@ window.onload = function() {
   });
 
   loadSliderOne();
+  loadSliderTwo();
+  loadSliderThree();
 
   //console.log(document.getElementById('comment-section'));
   document.getElementById('comment-section').addEventListener('submit', (event) => {
