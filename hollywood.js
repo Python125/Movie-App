@@ -1,23 +1,24 @@
+//1930-1939
 const sliderOneData = [
   {
     src: '',
-    title: 'All quiet on the western front',
+    title: 'Animal Crackers (1930)',
   },
   {
     src: '',
-    title: 'Dracula',
+    title: 'All Quiet on the Western Front (1930)',
   },
   {
     src: '',
-    title: 'The publish enemy'
+    title: 'Frankenstein (1931)',
   },
   {
     src: '',
-    title: 'frankenstein',
+    title: 'Dracula (1931)',
   },
   {
     src: '',
-    title: 'smart money'
+    title: 'The Public Enemy (1931)'
   },
 ];
 
@@ -61,7 +62,139 @@ const loadSliderOne = () => {
 
     slider1.appendChild( container );
   });
-}
+};
+
+//1940-1949
+const sliderTwoData = [
+  {
+    src: '',
+    title: 'The Philadelphia Story (1940)',
+  },
+  {
+    src: '',
+    title: 'Brother Orchid (1940)',
+  },
+  {
+    src: '',
+    title: 'His Girl Friday (1940)',
+  },
+  {
+    src: '',
+    title: 'The Letter (1940)',
+  },
+  {
+    src: '',
+    title: 'They Drive by Night (1940)'
+  },
+];
+
+const loadSliderTwo = () => {
+  const slider2 = document.getElementById('slider2');
+
+  if ( !slider2 ) {
+    console.log('cant find slider2`');
+    return;
+  }
+
+  sliderTwoData.forEach((slide) => {
+    const container = document.createElement('div');
+
+    const title = document.createElement('p');
+    title.textContent = slide.title;
+
+    container.appendChild( title );
+
+    const modalContainer = document.createElement('div');
+    modalContainer.setAttribute('class', 'modal');
+    modalContainer.setAttribute('id', 'modal1');
+
+    const modalBody = document.createElement('div');
+    modalBody.setAttribute('class', 'modal-body');
+
+
+    modalContainer.appendChild(modalBody);
+
+    const modalHeader = document.createElement('div');
+    modalHeader.setAttribute('class', 'modal-header');
+
+    modalContainer.appendChild(modalHeader);
+
+    const closeButton = document.createElement('button');
+    closeButton.setAttribute('data-close-button', true);
+    closeButton.setAttribute('class', 'close-button');
+    closeButton.textContent = '>&times;';
+
+    modalHeader.appendChild(closeButton);
+
+    slider2.appendChild( container );
+  });
+};
+
+//Golden Age Icons
+const sliderThreeData = [
+  {
+    src: '',
+    title: 'Edward G. Robinson',
+  },
+  {
+    src: '',
+    title: 'Bette Davis',
+  },
+  {
+    src: '',
+    title: 'Humphrey Bogart',
+  },
+  {
+    src: '',
+    title: 'Barbara Stanwyck',
+  },
+  {
+    src: '',
+    title: 'James Cagney'
+  },
+];
+
+const loadSliderThree = () => {
+  const slider3 = document.getElementById('slider3');
+
+  if ( !slider3 ) {
+    console.log('cant find slider3`');
+    return;
+  }
+
+  sliderThreeData.forEach((slide) => {
+    const container = document.createElement('div');
+
+    const title = document.createElement('p');
+    title.textContent = slide.title;
+
+    container.appendChild( title );
+
+    const modalContainer = document.createElement('div');
+    modalContainer.setAttribute('class', 'modal');
+    modalContainer.setAttribute('id', 'modal1');
+
+    const modalBody = document.createElement('div');
+    modalBody.setAttribute('class', 'modal-body');
+
+
+    modalContainer.appendChild(modalBody);
+
+    const modalHeader = document.createElement('div');
+    modalHeader.setAttribute('class', 'modal-header');
+
+    modalContainer.appendChild(modalHeader);
+
+    const closeButton = document.createElement('button');
+    closeButton.setAttribute('data-close-button', true);
+    closeButton.setAttribute('class', 'close-button');
+    closeButton.textContent = '>&times;';
+
+    modalHeader.appendChild(closeButton);
+
+    slider3.appendChild( container );
+  });
+};
 
 window.onload = function() {
   const slider1 = document.getElementById("slider1");
