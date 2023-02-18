@@ -24,7 +24,7 @@ h1 {
     font-size: 95px;
     color: black;
 }
-  
+
 .highlight-word-color1{
     color: #d1a746;
     text-align: center;
@@ -52,8 +52,8 @@ h2 {
 }
 
 .container {
-    max-width: 1600px;
-    width: 1600px;
+    max-width: 85%;
+    width: 85%;
     height: 520px;
     margin: 0px auto;
     position: relative;
@@ -90,15 +90,40 @@ h2 {
 }
 
 .container .buttons  i {
-	font-size: 30px;
-	color: black;
+    font-size: 23px;
+    color: black;
     justify-content: center;
+}
+ 
+.container iframe {
+    width: 95%;
+    height: 415px;
+}
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 85%;
+    }
+    .container iframe {
+      width: 85%;
+      height: 225px;
+    }
+}
+  
+  @media screen and (max-width: 400px) {
+    .container {
+      max-width: 80%;
+    }
+    .container iframe {
+      width: 75%;
+      height: 150px;
+    }
 }
 
 .container .previous,
 .next {
   width: 2%;
-  height: 50px;
+  height: 45px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -113,9 +138,40 @@ h2 {
     justify-content: center;
 }
 
-.modal {
+@media screen and (max-width: 600px) {
+    .container .previous,
+    .container .next {
+      width: 6%;
+    }
+  
+    .container .buttons i {
+      font-size: 20px;
+    }
+  
+    .container .images {
+      height: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .container .previous,
+    .container .next {
+      width: 20%;
+    }
+  
+    .container .buttons i {
+      font-size: 20px;
+    }
+  
+    .container .images {
+      height: 50%;
+    }
+  }
+
+  .modal {
     width: 700px;
-    height: 500px;
+    height: 520px;
+    max-width: 80%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -125,7 +181,6 @@ h2 {
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    max-width: 80%;
     overflow: scroll;
 }
 
@@ -159,7 +214,7 @@ h2 {
     padding: 10px 15px;
 }
   
-#overlay {
+.overlay {
     position: fixed;
     opacity: 0;
     transition: 200ms ease-in-out;
@@ -170,12 +225,23 @@ h2 {
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
 }
+
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+    height: 65%;
+    max-width: none;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
   
 #overlay.active {
     opacity: 1;
     pointer-events: all;
 }
-
 
 #comment-section {
     width: 700px;
@@ -189,13 +255,13 @@ h2 {
 .comment-submit-button {
     background-color: white;
     color: black;
-    width: 90px;
+    width: 100px;
     height: 40px;
     border-radius: 10px;
     font-size: 18px;
     text-align: center;
     justify-content: center;
-}
+  }
 
 textarea {
     width: 650px;
@@ -203,10 +269,33 @@ textarea {
     height: 150px;
     font-size: 18px;
     text-align: left;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+  #comment-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  textarea {
+    width: 95%;
+    resize: none;
+    height: 150px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .comment-submit-button {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
 }
 
 footer {
@@ -214,7 +303,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 165px;
+    height: 175px;
     background-color: silver;
     color: black;
     text-align: center;
@@ -246,7 +335,7 @@ footer {
 
 #output {
     margin: 25px auto;
-    font-size: 26px;
+    font-size: 20px;
     color: rgb(0, 0, 0);
 }
 
@@ -255,6 +344,7 @@ footer {
     width: 700px;
     margin: auto;
     text-align: center;
+    cursor: pointer;
 }
 
 .element2 {
@@ -262,6 +352,7 @@ footer {
     width: 700px;
     margin: auto;
     text-align: center;
+    cursor: pointer;
 }
 
 .btn-grid {
@@ -270,6 +361,12 @@ footer {
     justify-content: center;
     gap: 10px;
     margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .btn-grid {
+        grid-template-columns: repeat(2, auto);
+    }
 }
 
 .btn {

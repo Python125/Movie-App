@@ -23,8 +23,8 @@ function image_copy_add(slider) {
       a_tag.appendChild(img);
       slider.appendChild(a_tag);
     });
-  }
-}
+  };
+};
 
 image_copy_add(slider1);
 image_copy_add(slider2);
@@ -35,15 +35,15 @@ function previous_function(slider) {
   if (left < 0) {
     left = left + (image_width + image_margin_right);
     slider.style.left = left + "px";
-  }
-}
+  };
+};
 
 function next_function(slider) {
   let left = parseFloat(window.getComputedStyle(slider).getPropertyValue("left"));
   slider.querySelectorAll("img");
   left = left - (image_width + image_margin_right);
   slider.style.left = left + "px";
-}
+};
 
 prev1.addEventListener("click", () => {
   previous_function(slider1);
@@ -76,35 +76,35 @@ const overlay = document.getElementById('overlay')
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
+    openModal(modal);
+  });
+});
 
 overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
+  const modals = document.querySelectorAll('.modal.active');
   modals.forEach(modal => {
     closeModal(modal)
-  })
-})
+  });
+});
 
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal')
     closeModal(modal)
   })
-})
+});
 
 function openModal(modal) {
   if (modal == null) return
   modal.classList.add('active')
   overlay.classList.add('active')
-}
+};
 
 function closeModal(modal) {
   if (modal == null) return
   modal.classList.remove('active')
   overlay.classList.remove('active')
-}
+};
 
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
@@ -140,13 +140,13 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
-})
+});
 
 function startGame() {
   startButton.classList.add('hide')
@@ -303,7 +303,7 @@ const questions = [
       { text: 'Duck Soup (1933)', correct: true }
     ]
   },
-]
+];
 
 // This function is called when the user submits a comment
 function submitComment() {
@@ -346,10 +346,11 @@ function submitComment() {
   localStorage.setItem("comments", JSON.stringify(existingComments));
 
   document.getElementById("comment").value = "";
-}
+};
 
 // This function is called when the page loads
 window.onload = function() {
+  return;
   const comments = JSON.parse(localStorage.getItem("comments")) || [];
   const commentsDiv = document.getElementById("comments");
 
@@ -382,12 +383,13 @@ window.onload = function() {
 
     commentsDiv.appendChild(newCommentContainer);
   });
+
+  //console.log(document.getElementById('comment-section'));
+  document.getElementById('comment-section').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const comment = document.getElementById('comment').value;
+
+    // Send the comment to the server
+  });
 }
-
-document.getElementById('comment-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const comment = document.getElementById('comment').value;
-
-  // Send the comment to the server
-});
