@@ -20,14 +20,6 @@ const sliderOneData = [
     src: '',
     title: 'The Public Enemy (1931)',
   },
-  {
-    scr: '',
-    title: 'Little Caesar (1931)',
-  },
-  {
-    scr: '',
-    title: 'Smart Money (1931)',
-  },
 ];
 
 const loadSliderOne = () => {
