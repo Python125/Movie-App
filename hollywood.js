@@ -1,3 +1,68 @@
+const sliderOneData = [
+  {
+    src: '',
+    title: 'All quiet on the western front',
+  },
+  {
+    src: '',
+    title: 'Dracula',
+  },
+  {
+    src: '',
+    title: 'The publish enemy'
+  },
+  {
+    src: '',
+    title: 'frankenstein',
+  },
+  {
+    src: '',
+    title: 'smart money'
+  },
+];
+
+const loadSliderOne = () => {
+  const slider1 = document.getElementById('slider1');
+
+  if ( !slider1 ) {
+    console.log('cant find slider1`');
+    return;
+  }
+
+  sliderOneData.forEach((slide) => {
+    const container = document.createElement('div');
+
+    const title = document.createElement('p');
+    title.textContent = slide.title;
+
+    container.appendChild( title );
+
+    const modalContainer = document.createElement('div');
+    modalContainer.setAttribute('class', 'modal');
+    modalContainer.setAttribute('id', 'modal1');
+
+    const modalBody = document.createElement('div');
+    modalBody.setAttribute('class', 'modal-body');
+
+
+    modalContainer.appendChild(modalBody);
+
+    const modalHeader = document.createElement('div');
+    modalHeader.setAttribute('class', 'modal-header');
+
+    modalContainer.appendChild(modalHeader);
+
+    const closeButton = document.createElement('button');
+    closeButton.setAttribute('data-close-button', true);
+    closeButton.setAttribute('class', 'close-button');
+    closeButton.textContent = '>&times;';
+
+    modalHeader.appendChild(closeButton);
+
+    slider1.appendChild( container );
+  });
+}
+
 window.onload = function() {
   const slider1 = document.getElementById("slider1");
   const slider2 = document.getElementById("slider2");
@@ -385,6 +450,8 @@ window.onload = function() {
 
     commentsDiv.appendChild(newCommentContainer);
   });
+
+  loadSliderOne();
 
   //console.log(document.getElementById('comment-section'));
   document.getElementById('comment-section').addEventListener('submit', (event) => {
