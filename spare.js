@@ -1,3 +1,4 @@
+/*
 //1930-1939
 const sliderOneData = [
   {
@@ -597,3 +598,4 @@ window.onload = function() {
     // Send the comment to the server
   });
 };
+*/
