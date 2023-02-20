@@ -19,6 +19,7 @@ window.onload = function () {
     '"<b><i>My great aunt Jennifer ate a whole box of candy every day of her life. She lived to be 102 and when she`d been dead three days she looked better than you do *now!*</i></b>" <br><br> Sheridan Whiteside - <u>Monty Woolley</u> <br><br> (<i>The Man Who Came to Dinner</i>, <b>1942</b>)',
     '"<b><i>Public enemy, he calls me!</i></b>" <br><br> Johnny Rocco - played by <u>Edward G. Robinson</u> <br><br> (<i>Key Largo</i>, <b>1948</b>)',
     '"<b><i>Made it, Ma! Top of the world!</i></b>" <br><br> Cody Jarrett - played by <u>James Cagney</u> <br><br> (<i>White Heat</i>, <b>1949</b>)',
+    
   ];
 
   btn.addEventListener("click", function () {
